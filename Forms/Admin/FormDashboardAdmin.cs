@@ -169,8 +169,8 @@ namespace FalazAgriMart.Forms.Admin
 
         private void btnRiwayatTransaksi_Click(object sender, EventArgs e)
         {
-            // FormRiwayatTransaksi form = new FormRiwayatTransaksi();
-            // form.ShowDialog();
+            FormRiwayatTransaksi form = new FormRiwayatTransaksi();
+            form.ShowDialog();
             MessageBox.Show("Membuka Form Riwayat Transaksi", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

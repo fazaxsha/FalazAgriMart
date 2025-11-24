@@ -63,10 +63,11 @@ namespace FalazAgriMart.Forms.Pegawai
 
         private void btnPointOfSale_Click(object sender, EventArgs e)
         {
-            // FormPointOfSale form = new FormPointOfSale();
-            // form.ShowDialog();
-            MessageBox.Show("Membuka Form Point of Sale (Kasir)", "Info",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormPointOfSale form = new FormPointOfSale();
+            form.ShowDialog();
+
+            // Refresh dashboard setelah transaksi
+            LoadDashboardStatistics();
         }
 
         private void btnCekStok_Click(object sender, EventArgs e)

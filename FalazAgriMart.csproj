@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <Folder Include="Reports\" />
-    <Folder Include="Resources\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Icons\" />
   </ItemGroup>
 
   <ItemGroup>
