@@ -17,334 +17,334 @@
 
         private void InitializeComponent()
         {
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelFilter = new System.Windows.Forms.Panel();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnCari = new System.Windows.Forms.Button();
-            this.cmbKategori = new System.Windows.Forms.ComboBox();
-            this.txtCari = new System.Windows.Forms.TextBox();
-            this.lblKategori = new System.Windows.Forms.Label();
-            this.lblCari = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvProduk = new System.Windows.Forms.DataGridView();
-            this.panelInfo = new System.Windows.Forms.Panel();
-            this.lblStokRendah = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.panelLegend = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelTop.SuspendLayout();
-            this.panelFilter.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).BeginInit();
-            this.panelInfo.SuspendLayout();
-            this.panelLegend.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panelTop = new Panel();
+            lblTitle = new Label();
+            panelFilter = new Panel();
+            btnExport = new Button();
+            btnRefresh = new Button();
+            btnCari = new Button();
+            cmbKategori = new ComboBox();
+            txtCari = new TextBox();
+            lblKategori = new Label();
+            lblCari = new Label();
+            panelMain = new Panel();
+            groupBox1 = new GroupBox();
+            dgvProduk = new DataGridView();
+            panelInfo = new Panel();
+            lblStokRendah = new Label();
+            lblTotal = new Label();
+            panelLegend = new Panel();
+            panel3 = new Panel();
+            label3 = new Label();
+            panel2 = new Panel();
+            label2 = new Label();
+            panel1 = new Panel();
+            label1 = new Label();
+            panelTop.SuspendLayout();
+            panelFilter.SuspendLayout();
+            panelMain.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvProduk).BeginInit();
+            panelInfo.SuspendLayout();
+            panelLegend.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panelTop.Controls.Add(this.lblTitle);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1000, 60);
-            this.panelTop.TabIndex = 0;
+            panelTop.BackColor = Color.FromArgb(41, 128, 185);
+            panelTop.Controls.Add(lblTitle);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(1000, 60);
+            panelTop.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(173, 30);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Cek Stok Produk";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(20, 15);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(183, 30);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Cek Stok Produk";
             // 
             // panelFilter
             // 
-            this.panelFilter.BackColor = System.Drawing.Color.White;
-            this.panelFilter.Controls.Add(this.btnExport);
-            this.panelFilter.Controls.Add(this.btnRefresh);
-            this.panelFilter.Controls.Add(this.btnCari);
-            this.panelFilter.Controls.Add(this.cmbKategori);
-            this.panelFilter.Controls.Add(this.txtCari);
-            this.panelFilter.Controls.Add(this.lblKategori);
-            this.panelFilter.Controls.Add(this.lblCari);
-            this.panelFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFilter.Location = new System.Drawing.Point(0, 60);
-            this.panelFilter.Name = "panelFilter";
-            this.panelFilter.Padding = new System.Windows.Forms.Padding(20);
-            this.panelFilter.Size = new System.Drawing.Size(1000, 80);
-            this.panelFilter.TabIndex = 1;
+            panelFilter.BackColor = Color.White;
+            panelFilter.Controls.Add(btnExport);
+            panelFilter.Controls.Add(btnRefresh);
+            panelFilter.Controls.Add(btnCari);
+            panelFilter.Controls.Add(cmbKategori);
+            panelFilter.Controls.Add(txtCari);
+            panelFilter.Controls.Add(lblKategori);
+            panelFilter.Controls.Add(lblCari);
+            panelFilter.Dock = DockStyle.Top;
+            panelFilter.Location = new Point(0, 60);
+            panelFilter.Name = "panelFilter";
+            panelFilter.Padding = new Padding(20);
+            panelFilter.Size = new Size(1000, 80);
+            panelFilter.TabIndex = 1;
             // 
             // btnExport
             // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(880, 25);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(90, 35);
-            this.btnExport.TabIndex = 6;
-            this.btnExport.Text = "Export CSV";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            btnExport.BackColor = Color.FromArgb(52, 152, 219);
+            btnExport.FlatStyle = FlatStyle.Flat;
+            btnExport.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnExport.ForeColor = Color.White;
+            btnExport.Location = new Point(880, 25);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(90, 35);
+            btnExport.TabIndex = 6;
+            btnExport.Text = "Export CSV";
+            btnExport.UseVisualStyleBackColor = false;
+            btnExport.Click += btnExport_Click;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(780, 25);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(90, 35);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            btnRefresh.BackColor = Color.FromArgb(149, 165, 166);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnRefresh.ForeColor = Color.White;
+            btnRefresh.Location = new Point(780, 25);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(90, 35);
+            btnRefresh.TabIndex = 5;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnCari
             // 
-            this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCari.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCari.ForeColor = System.Drawing.Color.White;
-            this.btnCari.Location = new System.Drawing.Point(680, 25);
-            this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(90, 35);
-            this.btnCari.TabIndex = 4;
-            this.btnCari.Text = "Cari";
-            this.btnCari.UseVisualStyleBackColor = false;
-            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            btnCari.BackColor = Color.FromArgb(46, 204, 113);
+            btnCari.FlatStyle = FlatStyle.Flat;
+            btnCari.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnCari.ForeColor = Color.White;
+            btnCari.Location = new Point(680, 25);
+            btnCari.Name = "btnCari";
+            btnCari.Size = new Size(90, 35);
+            btnCari.TabIndex = 4;
+            btnCari.Text = "Cari";
+            btnCari.UseVisualStyleBackColor = false;
+            btnCari.Click += btnCari_Click;
             // 
             // cmbKategori
             // 
-            this.cmbKategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKategori.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cmbKategori.FormattingEnabled = true;
-            this.cmbKategori.Location = new System.Drawing.Point(450, 30);
-            this.cmbKategori.Name = "cmbKategori";
-            this.cmbKategori.Size = new System.Drawing.Size(200, 23);
-            this.cmbKategori.TabIndex = 3;
-            this.cmbKategori.SelectedIndexChanged += new System.EventHandler(this.cmbKategori_SelectedIndexChanged);
+            cmbKategori.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbKategori.Font = new Font("Segoe UI", 9F);
+            cmbKategori.FormattingEnabled = true;
+            cmbKategori.Location = new Point(450, 30);
+            cmbKategori.Name = "cmbKategori";
+            cmbKategori.Size = new Size(200, 23);
+            cmbKategori.TabIndex = 3;
+            cmbKategori.SelectedIndexChanged += cmbKategori_SelectedIndexChanged;
             // 
             // txtCari
             // 
-            this.txtCari.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCari.Location = new System.Drawing.Point(100, 30);
-            this.txtCari.Name = "txtCari";
-            this.txtCari.Size = new System.Drawing.Size(250, 23);
-            this.txtCari.TabIndex = 1;
-            this.txtCari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCari_KeyPress);
+            txtCari.Font = new Font("Segoe UI", 9F);
+            txtCari.Location = new Point(100, 30);
+            txtCari.Name = "txtCari";
+            txtCari.Size = new Size(250, 23);
+            txtCari.TabIndex = 1;
+            txtCari.KeyPress += txtCari_KeyPress;
             // 
             // lblKategori
             // 
-            this.lblKategori.AutoSize = true;
-            this.lblKategori.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblKategori.Location = new System.Drawing.Point(375, 34);
-            this.lblKategori.Name = "lblKategori";
-            this.lblKategori.Size = new System.Drawing.Size(69, 15);
-            this.lblKategori.TabIndex = 2;
-            this.lblKategori.Text = "Kategori : ";
+            lblKategori.AutoSize = true;
+            lblKategori.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblKategori.Location = new Point(375, 34);
+            lblKategori.Name = "lblKategori";
+            lblKategori.Size = new Size(64, 15);
+            lblKategori.TabIndex = 2;
+            lblKategori.Text = "Kategori : ";
             // 
             // lblCari
             // 
-            this.lblCari.AutoSize = true;
-            this.lblCari.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCari.Location = new System.Drawing.Point(23, 34);
-            this.lblCari.Name = "lblCari";
-            this.lblCari.Size = new System.Drawing.Size(71, 15);
-            this.lblCari.TabIndex = 0;
-            this.lblCari.Text = "Cari Nama :";
+            lblCari.AutoSize = true;
+            lblCari.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblCari.Location = new Point(23, 34);
+            lblCari.Name = "lblCari";
+            lblCari.Size = new Size(69, 15);
+            lblCari.TabIndex = 0;
+            lblCari.Text = "Cari Nama :";
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.panelMain.Controls.Add(this.groupBox1);
-            this.panelMain.Controls.Add(this.panelLegend);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 140);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(20);
-            this.panelMain.Size = new System.Drawing.Size(1000, 560);
-            this.panelMain.TabIndex = 2;
+            panelMain.BackColor = Color.FromArgb(236, 240, 241);
+            panelMain.Controls.Add(groupBox1);
+            panelMain.Controls.Add(panelLegend);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 140);
+            panelMain.Name = "panelMain";
+            panelMain.Padding = new Padding(20);
+            panelMain.Size = new Size(1000, 560);
+            panelMain.TabIndex = 2;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvProduk);
-            this.groupBox1.Controls.Add(this.panelInfo);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(20, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 460);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Daftar Produk";
+            groupBox1.Controls.Add(dgvProduk);
+            groupBox1.Controls.Add(panelInfo);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            groupBox1.Location = new Point(20, 20);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(960, 460);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Daftar Produk";
             // 
             // dgvProduk
             // 
-            this.dgvProduk.AllowUserToAddRows = false;
-            this.dgvProduk.AllowUserToDeleteRows = false;
-            this.dgvProduk.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProduk.BackgroundColor = System.Drawing.Color.White;
-            this.dgvProduk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProduk.Location = new System.Drawing.Point(3, 19);
-            this.dgvProduk.Name = "dgvProduk";
-            this.dgvProduk.ReadOnly = true;
-            this.dgvProduk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduk.Size = new System.Drawing.Size(954, 398);
-            this.dgvProduk.TabIndex = 0;
+            dgvProduk.AllowUserToAddRows = false;
+            dgvProduk.AllowUserToDeleteRows = false;
+            dgvProduk.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProduk.BackgroundColor = Color.White;
+            dgvProduk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProduk.Dock = DockStyle.Fill;
+            dgvProduk.Location = new Point(3, 19);
+            dgvProduk.Name = "dgvProduk";
+            dgvProduk.ReadOnly = true;
+            dgvProduk.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProduk.Size = new Size(954, 398);
+            dgvProduk.TabIndex = 0;
             // 
             // panelInfo
             // 
-            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panelInfo.Controls.Add(this.lblStokRendah);
-            this.panelInfo.Controls.Add(this.lblTotal);
-            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInfo.Location = new System.Drawing.Point(3, 417);
-            this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(954, 40);
-            this.panelInfo.TabIndex = 1;
+            panelInfo.BackColor = Color.FromArgb(41, 128, 185);
+            panelInfo.Controls.Add(lblStokRendah);
+            panelInfo.Controls.Add(lblTotal);
+            panelInfo.Dock = DockStyle.Bottom;
+            panelInfo.Location = new Point(3, 417);
+            panelInfo.Name = "panelInfo";
+            panelInfo.Size = new Size(954, 40);
+            panelInfo.TabIndex = 1;
             // 
             // lblStokRendah
             // 
-            this.lblStokRendah.AutoSize = true;
-            this.lblStokRendah.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStokRendah.ForeColor = System.Drawing.Color.White;
-            this.lblStokRendah.Location = new System.Drawing.Point(600, 11);
-            this.lblStokRendah.Name = "lblStokRendah";
-            this.lblStokRendah.Size = new System.Drawing.Size(146, 19);
-            this.lblStokRendah.TabIndex = 1;
-            this.lblStokRendah.Text = "Stok Rendah: 0 item";
+            lblStokRendah.AutoSize = true;
+            lblStokRendah.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStokRendah.ForeColor = Color.White;
+            lblStokRendah.Location = new Point(600, 11);
+            lblStokRendah.Name = "lblStokRendah";
+            lblStokRendah.Size = new Size(143, 19);
+            lblStokRendah.TabIndex = 1;
+            lblStokRendah.Text = "Stok Rendah: 0 item";
             // 
             // lblTotal
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(15, 11);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(118, 19);
-            this.lblTotal.TabIndex = 0;
-            this.lblTotal.Text = "Total: 0 produk";
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTotal.ForeColor = Color.White;
+            lblTotal.Location = new Point(15, 11);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(111, 19);
+            lblTotal.TabIndex = 0;
+            lblTotal.Text = "Total: 0 produk";
             // 
             // panelLegend
             // 
-            this.panelLegend.BackColor = System.Drawing.Color.White;
-            this.panelLegend.Controls.Add(this.panel3);
-            this.panelLegend.Controls.Add(this.panel2);
-            this.panelLegend.Controls.Add(this.panel1);
-            this.panelLegend.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLegend.Location = new System.Drawing.Point(20, 480);
-            this.panelLegend.Name = "panelLegend";
-            this.panelLegend.Padding = new System.Windows.Forms.Padding(10);
-            this.panelLegend.Size = new System.Drawing.Size(960, 60);
-            this.panelLegend.TabIndex = 1;
+            panelLegend.BackColor = Color.White;
+            panelLegend.Controls.Add(panel3);
+            panelLegend.Controls.Add(panel2);
+            panelLegend.Controls.Add(panel1);
+            panelLegend.Dock = DockStyle.Bottom;
+            panelLegend.Location = new Point(20, 480);
+            panelLegend.Name = "panelLegend";
+            panelLegend.Padding = new Padding(10);
+            panelLegend.Size = new Size(960, 60);
+            panelLegend.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(640, 15);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 30);
-            this.panel3.TabIndex = 2;
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(640, 15);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(300, 30);
+            panel3.TabIndex = 2;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(30, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "= Stok Aman (lebih dari 20 unit)";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.Location = new Point(30, 7);
+            label3.Name = "label3";
+            label3.Size = new Size(183, 15);
+            label3.TabIndex = 0;
+            label3.Text = "= Stok Aman (lebih dari 20 unit)";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(330, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 30);
-            this.panel2.TabIndex = 1;
+            panel2.BackColor = Color.FromArgb(241, 196, 15);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(330, 15);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(300, 30);
+            panel2.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(10, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Stok Menipis (11-20 unit)";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.Location = new Point(10, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(148, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Stok Menipis (11-20 unit)";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(20, 15);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 30);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = Color.FromArgb(231, 76, 60);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(20, 15);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(300, 30);
+            panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Stok Rendah (≤ 10 unit)";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(10, 7);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Stok Rendah (≤ 10 unit)";
             // 
             // FormCekStok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelFilter);
-            this.Controls.Add(this.panelTop);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Name = "FormCekStok";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cek Stok Produk";
-            this.Load += new System.EventHandler(this.FormCekStok_Load);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
-            this.panelFilter.ResumeLayout(false);
-            this.panelFilter.PerformLayout();
-            this.panelMain.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).EndInit();
-            this.panelInfo.ResumeLayout(false);
-            this.panelInfo.PerformLayout();
-            this.panelLegend.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1000, 700);
+            Controls.Add(panelMain);
+            Controls.Add(panelFilter);
+            Controls.Add(panelTop);
+            Font = new Font("Segoe UI", 9F);
+            Name = "FormCekStok";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cek Stok Produk";
+            Load += FormCekStok_Load;
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
+            panelFilter.ResumeLayout(false);
+            panelFilter.PerformLayout();
+            panelMain.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvProduk).EndInit();
+            panelInfo.ResumeLayout(false);
+            panelInfo.PerformLayout();
+            panelLegend.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -72,24 +72,24 @@ namespace FalazAgriMart.Forms.Pegawai
 
         private void btnCekStok_Click(object sender, EventArgs e)
         {
-            // FormCekStok form = new FormCekStok();
-            // form.ShowDialog();
+            FormCekStok form = new FormCekStok();
+            form.ShowDialog();
             MessageBox.Show("Membuka Form Cek Stok Produk", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnRiwayatPribadi_Click(object sender, EventArgs e)
         {
-            // FormRiwayatPribadi form = new FormRiwayatPribadi();
-            // form.ShowDialog();
+            FormRiwayatPribadi form = new FormRiwayatPribadi();
+            form.ShowDialog();
             MessageBox.Show("Membuka Form Riwayat Transaksi Pribadi", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnUbahPassword_Click(object sender, EventArgs e)
         {
-            // FormUbahPassword form = new FormUbahPassword();
-            // form.ShowDialog();   
+            FormUbahPassword form = new FormUbahPassword();
+            form.ShowDialog();
             MessageBox.Show("Membuka Form Ubah Password", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

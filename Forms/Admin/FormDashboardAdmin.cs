@@ -187,8 +187,8 @@ namespace FalazAgriMart.Forms.Admin
         {
             //FormCekStok form = new FormCekStok();
             //form.ShowDialog();
-            MessageBox.Show("Membuka Form Cek Stok Produk", "Info",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Membuka Form Cek Stok Produk", "Info",
+            //    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnUbahPassword_Click(object sender, EventArgs e)
