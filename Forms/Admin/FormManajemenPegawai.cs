@@ -29,9 +29,32 @@ namespace FalazAgriMart.Forms.Admin
             try
             {
                 DataTable dt = _pegawaiRepository.GetAllPegawai();
+
+                // ===== KONVERSI BOOLEAN KE STRING SEBELUM BINDING =====
+                if (dt.Columns.Contains("status") && dt.Columns["status"].DataType == typeof(bool))
+                {
+                    dt.Columns.Add("status_display", typeof(string));
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row["status"] != DBNull.Value)
+                        {
+                            bool status = Convert.ToBoolean(row["status"]);
+                            row["status_display"] = status ? "✅ Aktif" : "❌ Nonaktif";
+                        }
+                        else
+                        {
+                            row["status_display"] = "❌ Nonaktif";
+                        }
+                    }
+
+                    dt.Columns.Remove("status");
+                    dt.Columns["status_display"].ColumnName = "status";
+                }
+                // ===== AKHIR KONVERSI =====
+
                 dgvPegawai.DataSource = dt;
 
-                // Styling DataGridView
                 if (dgvPegawai.Columns.Count > 0)
                 {
                     dgvPegawai.Columns["user_id"].HeaderText = "ID";
@@ -45,16 +68,13 @@ namespace FalazAgriMart.Forms.Admin
                     dgvPegawai.Columns["status"].HeaderText = "Status";
                     dgvPegawai.Columns["status"].Width = 100;
 
-                    // Format status
+                    // Format warna untuk status nonaktif
                     foreach (DataGridViewRow row in dgvPegawai.Rows)
                     {
                         if (row.Cells["status"].Value != null)
                         {
-                            bool status = Convert.ToBoolean(row.Cells["status"].Value);
-                            row.Cells["status"].Value = status ? "✅ Aktif" : "❌ Nonaktif";
-
-                            // Warna beda untuk status nonaktif
-                            if (!status)
+                            string statusText = row.Cells["status"].Value.ToString();
+                            if (statusText.Contains("Nonaktif"))
                             {
                                 row.DefaultCellStyle.BackColor = System.Drawing.Color.LightGray;
                                 row.DefaultCellStyle.ForeColor = System.Drawing.Color.DarkGray;
@@ -62,7 +82,6 @@ namespace FalazAgriMart.Forms.Admin
                         }
                     }
 
-                    // Hide kolom created_at
                     if (dgvPegawai.Columns.Contains("created_at"))
                         dgvPegawai.Columns["created_at"].Visible = false;
                 }

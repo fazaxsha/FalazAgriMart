@@ -30,6 +30,34 @@ namespace FalazAgriMart.Forms.Admin
             try
             {
                 DataTable dt = _kategoriRepository.GetAllKategori();
+
+                // ===== KONVERSI BOOLEAN KE STRING SEBELUM BINDING =====
+                if (dt.Columns.Contains("status") && dt.Columns["status"].DataType == typeof(bool))
+                {
+                    // Tambah kolom string baru
+                    dt.Columns.Add("status_display", typeof(string));
+
+                    // Convert setiap baris
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row["status"] != DBNull.Value)
+                        {
+                            bool status = Convert.ToBoolean(row["status"]);
+                            row["status_display"] = status ? "✅ Aktif" : "❌ Nonaktif";
+                        }
+                        else
+                        {
+                            row["status_display"] = "❌ Nonaktif";
+                        }
+                    }
+
+                    // Hapus kolom boolean lama
+                    dt.Columns.Remove("status");
+                    // Rename kolom display jadi status
+                    dt.Columns["status_display"].ColumnName = "status";
+                }
+                // ===== AKHIR KONVERSI =====
+
                 dgvKategori.DataSource = dt;
 
                 if (dgvKategori.Columns.Count > 0)
@@ -43,15 +71,13 @@ namespace FalazAgriMart.Forms.Admin
                     dgvKategori.Columns["status"].HeaderText = "Status";
                     dgvKategori.Columns["status"].Width = 100;
 
-                    // Format status
+                    // Buat warna berbeda untuk status nonaktif (PINDAHKAN KE SINI)
                     foreach (DataGridViewRow row in dgvKategori.Rows)
                     {
                         if (row.Cells["status"].Value != null)
                         {
-                            bool status = Convert.ToBoolean(row.Cells["status"].Value);
-                            row.Cells["status"].Value = status ? "✅ Aktif" : "❌ Nonaktif";
-
-                            if (!status)
+                            string statusText = row.Cells["status"].Value.ToString();
+                            if (statusText.Contains("Nonaktif"))
                             {
                                 row.DefaultCellStyle.BackColor = System.Drawing.Color.LightGray;
                                 row.DefaultCellStyle.ForeColor = System.Drawing.Color.DarkGray;

@@ -90,9 +90,6 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Insert produk baru
-        /// </summary>
         public bool InsertProduk(Produk produk)
         {
             try
@@ -124,9 +121,6 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Update produk
-        /// </summary>
         public bool UpdateProduk(Produk produk)
         {
             try
@@ -162,9 +156,6 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Delete produk (soft delete - ubah status jadi false)
-        /// </summary>
         public bool DeleteProduk(int produkId)
         {
             try
@@ -188,9 +179,6 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Search produk by nama
-        /// </summary>
         public DataTable SearchProduk(string keyword)
         {
             try
@@ -226,9 +214,55 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Get daftar kategori untuk dropdown
-        /// </summary>
+
+        public bool ToggleStatusProduk(int produkId)
+        {
+            try
+            {
+                string query = @"
+            UPDATE produk 
+            SET status = NOT status 
+            WHERE produk_id = @produk_id
+        ";
+
+                NpgsqlParameter[] parameters = {
+            new NpgsqlParameter("@produk_id", produkId)
+        };
+
+                int rowsAffected = DatabaseHelper.ExecuteNonQuery(query, parameters);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error toggling produk status: {ex.Message}", ex);
+            }
+        }
+
+
+        public bool AktifkanProduk(int produkId)
+        {
+            try
+            {
+                string query = @"
+            UPDATE produk 
+            SET status = TRUE 
+            WHERE produk_id = @produk_id
+        ";
+
+                NpgsqlParameter[] parameters = {
+            new NpgsqlParameter("@produk_id", produkId)
+        };
+
+                int rowsAffected = DatabaseHelper.ExecuteNonQuery(query, parameters);
+                return rowsAffected > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error aktivasi produk: {ex.Message}", ex);
+            }
+        }
+
+
         public DataTable GetKategoriList()
         {
             try
@@ -248,9 +282,6 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Get daftar supplier untuk dropdown
-        /// </summary>
         public DataTable GetSupplierList()
         {
             try
@@ -270,9 +301,6 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
-        /// Cek apakah nama produk sudah ada
-        /// </summary>
         public bool IsNamaProdukExists(string namaProduk, int? excludeProdukId = null)
         {
             try

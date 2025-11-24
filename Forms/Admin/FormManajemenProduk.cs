@@ -32,47 +32,121 @@ namespace FalazAgriMart.Forms.Admin
             try
             {
                 DataTable dt = _produkRepository.GetAllProduk();
+
+                // ===== KONVERSI BOOLEAN KE STRING SEBELUM BINDING =====
+                if (dt.Columns.Contains("status") && dt.Columns["status"].DataType == typeof(bool))
+                {
+                    dt.Columns.Add("status_display", typeof(string));
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row["status"] != DBNull.Value)
+                        {
+                            bool status = Convert.ToBoolean(row["status"]);
+                            row["status_display"] = status ? "✅ Aktif" : "❌ Nonaktif";
+                        }
+                        else
+                        {
+                            row["status_display"] = "❌ Nonaktif";
+                        }
+                    }
+
+                    dt.Columns.Remove("status");
+                    dt.Columns["status_display"].ColumnName = "status";
+                }
+                // ===== AKHIR KONVERSI =====
+
                 dgvProduk.DataSource = dt;
 
                 // Styling DataGridView
                 if (dgvProduk.Columns.Count > 0)
                 {
-                    dgvProduk.Columns["produk_id"].HeaderText = "ID";
-                    dgvProduk.Columns["produk_id"].Width = 50;
-                    dgvProduk.Columns["nama_produk"].HeaderText = "Nama Produk";
-                    dgvProduk.Columns["nama_produk"].Width = 200;
-                    dgvProduk.Columns["nama_kategori"].HeaderText = "Kategori";
-                    dgvProduk.Columns["nama_kategori"].Width = 120;
-                    dgvProduk.Columns["satuan"].HeaderText = "Satuan";
-                    dgvProduk.Columns["satuan"].Width = 80;
-                    dgvProduk.Columns["harga"].HeaderText = "Harga";
-                    dgvProduk.Columns["harga"].Width = 100;
-                    dgvProduk.Columns["harga"].DefaultCellStyle.Format = "N0";
-                    dgvProduk.Columns["harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                    dgvProduk.Columns["stok"].HeaderText = "Stok";
-                    dgvProduk.Columns["stok"].Width = 80;
-                    dgvProduk.Columns["stok"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvProduk.Columns["nama_supplier"].HeaderText = "Supplier";
-                    dgvProduk.Columns["nama_supplier"].Width = 150;
+                    // PASTIKAN URUTAN KOLOM INI ADA DI DATATABLE
+                    if (dgvProduk.Columns.Contains("produk_id"))
+                    {
+                        dgvProduk.Columns["produk_id"].HeaderText = "ID";
+                        dgvProduk.Columns["produk_id"].Width = 50;
+                    }
 
-                    // Hide kolom yang tidak perlu
+                    if (dgvProduk.Columns.Contains("nama_produk"))
+                    {
+                        dgvProduk.Columns["nama_produk"].HeaderText = "Nama Produk";
+                        dgvProduk.Columns["nama_produk"].Width = 200;
+                    }
+
+                    if (dgvProduk.Columns.Contains("nama_kategori"))
+                    {
+                        dgvProduk.Columns["nama_kategori"].HeaderText = "Kategori";
+                        dgvProduk.Columns["nama_kategori"].Width = 120;
+                    }
+
+                    if (dgvProduk.Columns.Contains("satuan"))
+                    {
+                        dgvProduk.Columns["satuan"].HeaderText = "Satuan";
+                        dgvProduk.Columns["satuan"].Width = 80;
+                    }
+
+                    if (dgvProduk.Columns.Contains("harga"))
+                    {
+                        dgvProduk.Columns["harga"].HeaderText = "Harga";
+                        dgvProduk.Columns["harga"].Width = 100;
+                        dgvProduk.Columns["harga"].DefaultCellStyle.Format = "N0";
+                        dgvProduk.Columns["harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    }
+
+                    if (dgvProduk.Columns.Contains("stok"))
+                    {
+                        dgvProduk.Columns["stok"].HeaderText = "Stok";
+                        dgvProduk.Columns["stok"].Width = 80;
+                        dgvProduk.Columns["stok"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    }
+
+                    if (dgvProduk.Columns.Contains("nama_supplier"))
+                    {
+                        dgvProduk.Columns["nama_supplier"].HeaderText = "Supplier";
+                        dgvProduk.Columns["nama_supplier"].Width = 150;
+                    }
+
+                    // Tampilkan kolom status dengan format
+                    if (dgvProduk.Columns.Contains("status"))
+                    {
+                        dgvProduk.Columns["status"].HeaderText = "Status";
+                        dgvProduk.Columns["status"].Width = 100;
+                    }
+
+                    // Hide kolom yang tidak perlu (JANGAN DIHAPUS, HANYA HIDDEN)
                     if (dgvProduk.Columns.Contains("kategori_id"))
                         dgvProduk.Columns["kategori_id"].Visible = false;
+
                     if (dgvProduk.Columns.Contains("supplier_id"))
                         dgvProduk.Columns["supplier_id"].Visible = false;
+
                     if (dgvProduk.Columns.Contains("stok_minimum"))
                         dgvProduk.Columns["stok_minimum"].Visible = false;
-                    if (dgvProduk.Columns.Contains("status"))
-                        dgvProduk.Columns["status"].Visible = false;
+
                     if (dgvProduk.Columns.Contains("created_at"))
                         dgvProduk.Columns["created_at"].Visible = false;
+
+                    // Format warna untuk produk nonaktif
+                    foreach (DataGridViewRow row in dgvProduk.Rows)
+                    {
+                        if (row.Cells["status"].Value != null)
+                        {
+                            string statusText = row.Cells["status"].Value.ToString();
+                            if (statusText.Contains("Nonaktif"))
+                            {
+                                row.DefaultCellStyle.BackColor = System.Drawing.Color.LightGray;
+                                row.DefaultCellStyle.ForeColor = System.Drawing.Color.DarkGray;
+                            }
+                        }
+                    }
                 }
 
                 lblTotalProduk.Text = $"Total: {dt.Rows.Count} produk";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Gagal memuat data: {ex.Message}", "Error",
+                MessageBox.Show($"Gagal memuat data: {ex.Message}\n\nStack Trace:\n{ex.StackTrace}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -115,28 +189,49 @@ namespace FalazAgriMart.Forms.Admin
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvProduk.Rows[e.RowIndex];
-                _selectedProdukId = Convert.ToInt32(row.Cells["produk_id"].Value);
+                try
+                {
+                    DataGridViewRow row = dgvProduk.Rows[e.RowIndex];
+                    _selectedProdukId = Convert.ToInt32(row.Cells["produk_id"].Value);
 
-                // Fill form
-                txtNamaProduk.Text = row.Cells["nama_produk"].Value.ToString();
+                    // Fill form
+                    txtNamaProduk.Text = row.Cells["nama_produk"].Value?.ToString() ?? "";
 
-                if (row.Cells["kategori_id"].Value != DBNull.Value)
-                    cmbKategori.SelectedValue = row.Cells["kategori_id"].Value;
-                else
-                    cmbKategori.SelectedIndex = -1;
+                    // Kategori - CEK DULU APAKAH KOLOM ADA
+                    if (dgvProduk.Columns.Contains("kategori_id") && row.Cells["kategori_id"].Value != DBNull.Value)
+                        cmbKategori.SelectedValue = row.Cells["kategori_id"].Value;
+                    else
+                        cmbKategori.SelectedIndex = -1;
 
-                cmbSatuan.Text = row.Cells["satuan"].Value.ToString();
-                txtHarga.Text = row.Cells["harga"].Value.ToString();
-                txtStok.Text = row.Cells["stok"].Value.ToString();
+                    cmbSatuan.Text = row.Cells["satuan"].Value?.ToString() ?? "";
+                    txtHarga.Text = row.Cells["harga"].Value?.ToString() ?? "";
+                    txtStok.Text = row.Cells["stok"].Value?.ToString() ?? "";
 
-                if (row.Cells["supplier_id"].Value != DBNull.Value)
-                    cmbSupplier.SelectedValue = row.Cells["supplier_id"].Value;
-                else
-                    cmbSupplier.SelectedIndex = -1;
+                    // Supplier - CEK DULU APAKAH KOLOM ADA
+                    if (dgvProduk.Columns.Contains("supplier_id") && row.Cells["supplier_id"].Value != DBNull.Value)
+                        cmbSupplier.SelectedValue = row.Cells["supplier_id"].Value;
+                    else
+                        cmbSupplier.SelectedIndex = -1;
 
-                SetButtonState(true);
-                _isEditMode = false;
+                    // Cek status untuk show/hide button Aktifkan
+                    if (dgvProduk.Columns.Contains("status"))
+                    {
+                        string statusText = row.Cells["status"].Value?.ToString() ?? "";
+                        bool isAktif = statusText.Contains("Aktif") && !statusText.Contains("Nonaktif");
+
+                        btnAktifkan.Visible = !isAktif; // Tampilkan button Aktifkan jika produk nonaktif
+                        btnHapus.Visible = isAktif;     // Sembunyikan Hapus jika nonaktif
+                        btnEdit.Enabled = isAktif;       // Disable edit jika nonaktif
+                    }
+
+                    SetButtonState(true);
+                    _isEditMode = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error saat memilih produk: {ex.Message}\n\nStack Trace:\n{ex.StackTrace}",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -218,6 +313,51 @@ namespace FalazAgriMart.Forms.Admin
             {
                 MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Tambahkan method ini di FormManajemenProduk.cs
+        private void btnAktifkan_Click(object sender, EventArgs e)
+        {
+            if (_selectedProdukId == 0)
+            {
+                MessageBox.Show("Pilih produk yang akan diaktifkan!", "Validasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Apakah Anda yakin ingin mengaktifkan kembali produk ini?",
+                "Konfirmasi Aktifkan",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    bool success = _produkRepository.AktifkanProduk(_selectedProdukId);
+
+                    if (success)
+                    {
+                        MessageBox.Show("Produk berhasil diaktifkan!", "Sukses",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                        ClearForm();
+                        SetButtonState(false);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gagal mengaktifkan produk!", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -379,6 +519,9 @@ namespace FalazAgriMart.Forms.Admin
             btnEdit.Enabled = hasSelection && !_isEditMode;
             btnHapus.Enabled = hasSelection && !_isEditMode;
             btnBatal.Enabled = hasSelection || _isEditMode;
+
+            // Tombol Aktifkan akan di-handle di dgvProduk_CellClick
+            // Jadi tidak perlu di-set di sini
         }
 
         private void txtHarga_KeyPress(object sender, KeyPressEventArgs e)

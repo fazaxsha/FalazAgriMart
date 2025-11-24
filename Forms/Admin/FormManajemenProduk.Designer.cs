@@ -28,6 +28,7 @@ namespace FalazAgriMart.Forms.Admin
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnAktifkan;
         private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvProduk;
@@ -65,6 +66,7 @@ namespace FalazAgriMart.Forms.Admin
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnHapus = new System.Windows.Forms.Button();
+            this.btnAktifkan = new System.Windows.Forms.Button();
             this.btnBatal = new System.Windows.Forms.Button();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.lblCari = new System.Windows.Forms.Label();
@@ -101,6 +103,7 @@ namespace FalazAgriMart.Forms.Admin
             this.panelForm.BackColor = System.Drawing.Color.White;
             this.panelForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelForm.Controls.Add(this.btnBatal);
+            this.panelForm.Controls.Add(this.btnAktifkan);
             this.panelForm.Controls.Add(this.btnHapus);
             this.panelForm.Controls.Add(this.btnEdit);
             this.panelForm.Controls.Add(this.btnSimpan);
@@ -275,6 +278,19 @@ namespace FalazAgriMart.Forms.Admin
             this.btnHapus.UseVisualStyleBackColor = false;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
 
+            // btnAktifkan (posisi sama dengan btnHapus, toggle visibility)
+            this.btnAktifkan.BackColor = System.Drawing.Color.FromArgb(76, 175, 80);
+            this.btnAktifkan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAktifkan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAktifkan.ForeColor = System.Drawing.Color.White;
+            this.btnAktifkan.Location = new System.Drawing.Point(125, btnY);
+            this.btnAktifkan.Name = "btnAktifkan";
+            this.btnAktifkan.Size = new System.Drawing.Size(btnWidth, btnHeight);
+            this.btnAktifkan.Text = "✅ Aktifkan";
+            this.btnAktifkan.UseVisualStyleBackColor = false;
+            this.btnAktifkan.Visible = false;
+            this.btnAktifkan.Click += new System.EventHandler(this.btnAktifkan_Click);
+
             btnY += btnHeight + 10;
 
             // btnBatal
@@ -288,7 +304,6 @@ namespace FalazAgriMart.Forms.Admin
             this.btnBatal.Text = "❌ Batal";
             this.btnBatal.UseVisualStyleBackColor = false;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
-
             // panelGrid
             this.panelGrid.BackColor = System.Drawing.Color.White;
             this.panelGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
