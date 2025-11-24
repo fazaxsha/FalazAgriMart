@@ -28,7 +28,7 @@ namespace FalazAgriMart.Forms.Admin
 
             // Load statistik dashboard
             LoadDashboardStatistics();
-            
+
             // Check Smart Stock Alert
             CheckSmartStockAlert();
         }
@@ -57,9 +57,9 @@ namespace FalazAgriMart.Forms.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Gagal memuat statistik:\n{ex.Message}", "Error", 
+                MessageBox.Show($"Gagal memuat statistik:\n{ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
                 // Set default values jika error
                 lblTotalProduk.Text = "0";
                 lblTotalPegawai.Text = "0";
@@ -109,26 +109,26 @@ namespace FalazAgriMart.Forms.Admin
                 if (lowStockData.Rows.Count > 0)
                 {
                     string message = "📊 PRODUK DENGAN STOK RENDAH:\n\n";
-                    
+
                     foreach (System.Data.DataRow row in lowStockData.Rows)
                     {
                         string namaProduk = row["nama_produk"].ToString();
                         int stok = Convert.ToInt32(row["stok"]);
                         int stokMin = Convert.ToInt32(row["stok_minimum"]);
                         string satuan = row["satuan"].ToString();
-                        
+
                         message += $"• {namaProduk}: {stok} {satuan} (Min: {stokMin})\n";
                     }
 
                     message += "\n💡 Segera lakukan restocking!";
 
-                    MessageBox.Show(message, "Daftar Stok Rendah", 
+                    MessageBox.Show(message, "Daftar Stok Rendah",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Gagal memuat data stok rendah:\n{ex.Message}", "Error", 
+                MessageBox.Show($"Gagal memuat data stok rendah:\n{ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -139,40 +139,39 @@ namespace FalazAgriMart.Forms.Admin
         {
             FormManajemenProduk form = new FormManajemenProduk();
             form.ShowDialog();
-            
+
             // Refresh dashboard setelah form ditutup
             LoadDashboardStatistics();
         }
 
         private void btnManajemenPegawai_Click(object sender, EventArgs e)
         {
-            // FormManajemenPegawai form = new FormManajemenPegawai();
-            // form.ShowDialog();
-            MessageBox.Show("Membuka Form Manajemen Pegawai", "Info", 
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormManajemenPegawai form = new FormManajemenPegawai();
+            form.ShowDialog();
+
+            // Refresh dashboard setelah form ditutup
+            LoadDashboardStatistics();
         }
 
         private void btnManajemenSupplier_Click(object sender, EventArgs e)
         {
-            // FormManajemenSupplier form = new FormManajemenSupplier();
-            // form.ShowDialog();
-            MessageBox.Show("Membuka Form Manajemen Supplier", "Info", 
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormManajemenSupplier form = new FormManajemenSupplier();
+            form.ShowDialog();
+            LoadDashboardStatistics();
         }
 
         private void btnManajemenKategori_Click(object sender, EventArgs e)
         {
-            // FormManajemenKategori form = new FormManajemenKategori();
-            // form.ShowDialog();
-            MessageBox.Show("Membuka Form Manajemen Kategori", "Info", 
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormManajemenKategori form = new FormManajemenKategori();
+            form.ShowDialog();
+            LoadDashboardStatistics();
         }
 
         private void btnRiwayatTransaksi_Click(object sender, EventArgs e)
         {
             // FormRiwayatTransaksi form = new FormRiwayatTransaksi();
             // form.ShowDialog();
-            MessageBox.Show("Membuka Form Riwayat Transaksi", "Info", 
+            MessageBox.Show("Membuka Form Riwayat Transaksi", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -180,7 +179,7 @@ namespace FalazAgriMart.Forms.Admin
         {
             // FormLaporanKeuangan form = new FormLaporanKeuangan();
             // form.ShowDialog();
-            MessageBox.Show("Membuka Form Laporan Keuangan", "Info", 
+            MessageBox.Show("Membuka Form Laporan Keuangan", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -188,7 +187,7 @@ namespace FalazAgriMart.Forms.Admin
         {
             // FormCekStok form = new FormCekStok();
             // form.ShowDialog();
-            MessageBox.Show("Membuka Form Cek Stok Produk", "Info", 
+            MessageBox.Show("Membuka Form Cek Stok Produk", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -196,7 +195,7 @@ namespace FalazAgriMart.Forms.Admin
         {
             // FormUbahPassword form = new FormUbahPassword();
             // form.ShowDialog();
-            MessageBox.Show("Membuka Form Ubah Password", "Info", 
+            MessageBox.Show("Membuka Form Ubah Password", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -225,7 +224,7 @@ namespace FalazAgriMart.Forms.Admin
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadDashboardStatistics();
-            MessageBox.Show("Dashboard berhasil direfresh!", "Info", 
+            MessageBox.Show("Dashboard berhasil direfresh!", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
