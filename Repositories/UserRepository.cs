@@ -102,20 +102,38 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        public bool UpdatePassword(int userId, string newPassword)
+        // Perbaikan: Menerima 3 parameter untuk validasi password lama
+        public bool UpdatePassword(int userId, string oldPassword, string newPassword)
         {
             try
             {
-                string query = @"UPDATE users 
-                               SET password = @password 
-                               WHERE user_id = @userId";
+                // 1. Cek apakah password lama sesuai dengan yang ada di database
+                string checkQuery = "SELECT COUNT(*) FROM users WHERE user_id = @userId AND password = @oldPassword";
 
-                NpgsqlParameter[] parameters = {
-                    new NpgsqlParameter("@password", newPassword),
+                NpgsqlParameter[] checkParams = {
+                    new NpgsqlParameter("@userId", userId),
+                    new NpgsqlParameter("@oldPassword", oldPassword)
+                };
+
+                long count = Convert.ToInt64(DatabaseHelper.ExecuteScalar(checkQuery, checkParams));
+
+                // Jika password lama salah, return false
+                if (count == 0)
+                {
+                    return false;
+                }
+
+                // 2. Jika password lama benar, lakukan update ke password baru
+                string updateQuery = @"UPDATE users 
+                                       SET password = @newPassword 
+                                       WHERE user_id = @userId";
+
+                NpgsqlParameter[] updateParams = {
+                    new NpgsqlParameter("@newPassword", newPassword),
                     new NpgsqlParameter("@userId", userId)
                 };
 
-                int rowsAffected = DatabaseHelper.ExecuteNonQuery(query, parameters);
+                int rowsAffected = DatabaseHelper.ExecuteNonQuery(updateQuery, updateParams);
                 return rowsAffected > 0;
             }
             catch (Exception ex)

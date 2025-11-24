@@ -89,7 +89,7 @@ namespace FalazAgriMart.Forms.Pegawai
         private void btnUbahPassword_Click(object sender, EventArgs e)
         {
             // FormUbahPassword form = new FormUbahPassword();
-            // form.ShowDialog();
+            // form.ShowDialog();   
             MessageBox.Show("Membuka Form Ubah Password", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

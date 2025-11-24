@@ -179,10 +179,12 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        public DataTable SearchProduk(string keyword)
+        // Perbaikan: Menambahkan parameter opsional 'kategori'
+        public DataTable SearchProduk(string keyword, string kategori = null)
         {
             try
             {
+                // Base Query
                 string query = @"
                     SELECT 
                         p.produk_id,
@@ -195,18 +197,29 @@ namespace FalazAgriMart.Repositories
                     FROM produk p
                     LEFT JOIN kategori k ON p.kategori_id = k.kategori_id
                     LEFT JOIN supplier s ON p.supplier_id = s.supplier_id
-                    WHERE 
-                        p.status = TRUE AND
-                        (LOWER(p.nama_produk) LIKE LOWER(@keyword) OR
-                         LOWER(k.nama_kategori) LIKE LOWER(@keyword))
-                    ORDER BY p.nama_produk ASC
-                ";
+                    WHERE p.status = TRUE 
+                    AND (LOWER(p.nama_produk) LIKE LOWER(@keyword) OR LOWER(k.nama_kategori) LIKE LOWER(@keyword))";
 
-                NpgsqlParameter[] parameters = {
+                // Tambahkan filter kategori jika ada (tidak null)
+                if (!string.IsNullOrEmpty(kategori))
+                {
+                    query += " AND k.nama_kategori = @kategori";
+                }
+
+                query += " ORDER BY p.nama_produk ASC";
+
+                // Setup Parameters
+                List<NpgsqlParameter> parameters = new List<NpgsqlParameter>
+                {
                     new NpgsqlParameter("@keyword", "%" + keyword + "%")
                 };
 
-                return DatabaseHelper.ExecuteQuery(query, parameters);
+                if (!string.IsNullOrEmpty(kategori))
+                {
+                    parameters.Add(new NpgsqlParameter("@kategori", kategori));
+                }
+
+                return DatabaseHelper.ExecuteQuery(query, parameters.ToArray());
             }
             catch (Exception ex)
             {
