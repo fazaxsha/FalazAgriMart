@@ -6,9 +6,7 @@ namespace FalazAgriMart.Database
 {
     public class DatabaseHelper
     {
-        /// <summary>
         /// Execute query yang tidak mengembalikan data (INSERT, UPDATE, DELETE)
-        /// </summary>
         public static int ExecuteNonQuery(string query, NpgsqlParameter[] parameters = null)
         {
             try

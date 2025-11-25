@@ -109,12 +109,11 @@
             // txtPassword
             // 
             txtPassword.BackColor = Color.FromArgb(250, 250, 250);
-            txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Segoe UI", 11F);
             txtPassword.ForeColor = Color.FromArgb(33, 33, 33);
             txtPassword.Location = new Point(60, 355);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(380, 20);
+            txtPassword.Size = new Size(380, 27);
             txtPassword.TabIndex = 5;
             txtPassword.UseSystemPasswordChar = true;
             txtPassword.KeyPress += txtPassword_KeyPress;
@@ -133,12 +132,11 @@
             // txtUsername
             // 
             txtUsername.BackColor = Color.FromArgb(250, 250, 250);
-            txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Segoe UI", 11F);
             txtUsername.ForeColor = Color.FromArgb(33, 33, 33);
             txtUsername.Location = new Point(60, 275);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(380, 20);
+            txtUsername.Size = new Size(380, 27);
             txtUsername.TabIndex = 3;
             // 
             // lblUsername
