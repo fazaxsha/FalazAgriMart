@@ -58,14 +58,14 @@ namespace FalazAgriMart.Forms.Admin
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvKategori = new System.Windows.Forms.DataGridView();
             this.lblTotalKategori = new System.Windows.Forms.Label();
-
             this.panelTop.SuspendLayout();
             this.panelForm.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategori)).BeginInit();
             this.SuspendLayout();
-
+            // 
             // panelTop
+            // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(156, 39, 176);
             this.panelTop.Controls.Add(this.lblTitle);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -73,8 +73,9 @@ namespace FalazAgriMart.Forms.Admin
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1200, 60);
             this.panelTop.TabIndex = 0;
-
+            // 
             // lblTitle
+            // 
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(20, 15);
@@ -82,8 +83,9 @@ namespace FalazAgriMart.Forms.Admin
             this.lblTitle.Size = new System.Drawing.Size(400, 30);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "📋 Manajemen Kategori";
-
+            // 
             // panelForm
+            // 
             this.panelForm.BackColor = System.Drawing.Color.White;
             this.panelForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelForm.Controls.Add(this.btnBatal);
@@ -100,123 +102,125 @@ namespace FalazAgriMart.Forms.Admin
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(350, 600);
             this.panelForm.TabIndex = 1;
-
-            int yPos = 20;
-            int labelWidth = 120;
-            int fieldWidth = 220;
-            int spacing = 60;
-
+            // 
             // lblNamaKategori
+            // 
             this.lblNamaKategori.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblNamaKategori.Location = new System.Drawing.Point(15, yPos);
+            this.lblNamaKategori.Location = new System.Drawing.Point(15, 20);
             this.lblNamaKategori.Name = "lblNamaKategori";
-            this.lblNamaKategori.Size = new System.Drawing.Size(labelWidth, 20);
+            this.lblNamaKategori.Size = new System.Drawing.Size(120, 20);
+            this.lblNamaKategori.TabIndex = 0;
             this.lblNamaKategori.Text = "Nama Kategori:";
-
+            // 
             // txtNamaKategori
+            // 
             this.txtNamaKategori.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNamaKategori.Location = new System.Drawing.Point(15, yPos + 25);
+            this.txtNamaKategori.Location = new System.Drawing.Point(15, 45);
             this.txtNamaKategori.Name = "txtNamaKategori";
-            this.txtNamaKategori.Size = new System.Drawing.Size(fieldWidth, 25);
-            this.txtNamaKategori.TabIndex = 0;
-            yPos += spacing;
-
+            this.txtNamaKategori.Size = new System.Drawing.Size(220, 25);
+            this.txtNamaKategori.TabIndex = 1;
+            // 
             // lblDeskripsi
+            // 
             this.lblDeskripsi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblDeskripsi.Location = new System.Drawing.Point(15, yPos);
+            this.lblDeskripsi.Location = new System.Drawing.Point(15, 80);
             this.lblDeskripsi.Name = "lblDeskripsi";
-            this.lblDeskripsi.Size = new System.Drawing.Size(labelWidth, 20);
+            this.lblDeskripsi.Size = new System.Drawing.Size(120, 20);
+            this.lblDeskripsi.TabIndex = 2;
             this.lblDeskripsi.Text = "Deskripsi:";
-
+            // 
             // txtDeskripsi
+            // 
             this.txtDeskripsi.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtDeskripsi.Location = new System.Drawing.Point(15, yPos + 25);
+            this.txtDeskripsi.Location = new System.Drawing.Point(15, 105);
             this.txtDeskripsi.Multiline = true;
             this.txtDeskripsi.Name = "txtDeskripsi";
-            this.txtDeskripsi.Size = new System.Drawing.Size(fieldWidth, 80);
-            this.txtDeskripsi.TabIndex = 1;
             this.txtDeskripsi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            yPos += 115;
-
+            this.txtDeskripsi.Size = new System.Drawing.Size(220, 80);
+            this.txtDeskripsi.TabIndex = 3;
+            // 
             // lblInfo
+            // 
             this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Italic);
             this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(100, 100, 100);
-            this.lblInfo.Location = new System.Drawing.Point(15, yPos);
+            this.lblInfo.Location = new System.Drawing.Point(15, 195);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(310, 50);
+            this.lblInfo.TabIndex = 4;
             this.lblInfo.Text = "💡 Kategori yang masih digunakan oleh produk tidak dapat dihapus. Ubah kategori produk terlebih dahulu.";
-            yPos += 60;
-
-            // Buttons
-            int btnWidth = 100;
-            int btnHeight = 35;
-            int btnY = yPos;
-
+            // 
             // btnTambah
+            // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(33, 150, 243);
             this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTambah.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnTambah.ForeColor = System.Drawing.Color.White;
-            this.btnTambah.Location = new System.Drawing.Point(15, btnY);
+            this.btnTambah.Location = new System.Drawing.Point(15, 255);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(btnWidth, btnHeight);
+            this.btnTambah.Size = new System.Drawing.Size(100, 35);
+            this.btnTambah.TabIndex = 5;
             this.btnTambah.Text = "➕ Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
-
+            // 
             // btnSimpan
+            // 
             this.btnSimpan.BackColor = System.Drawing.Color.FromArgb(76, 175, 80);
             this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSimpan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(125, btnY);
+            this.btnSimpan.Location = new System.Drawing.Point(125, 255);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(btnWidth, btnHeight);
+            this.btnSimpan.Size = new System.Drawing.Size(100, 35);
+            this.btnSimpan.TabIndex = 6;
             this.btnSimpan.Text = "💾 Simpan";
             this.btnSimpan.UseVisualStyleBackColor = false;
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
-
-            btnY += btnHeight + 10;
-
+            // 
             // btnEdit
+            // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(255, 152, 0);
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(15, btnY);
+            this.btnEdit.Location = new System.Drawing.Point(15, 300);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(btnWidth, btnHeight);
+            this.btnEdit.Size = new System.Drawing.Size(100, 35);
+            this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "✏️ Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-
+            // 
             // btnHapus
+            // 
             this.btnHapus.BackColor = System.Drawing.Color.FromArgb(211, 47, 47);
             this.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHapus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnHapus.ForeColor = System.Drawing.Color.White;
-            this.btnHapus.Location = new System.Drawing.Point(125, btnY);
+            this.btnHapus.Location = new System.Drawing.Point(125, 300);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(btnWidth, btnHeight);
+            this.btnHapus.Size = new System.Drawing.Size(100, 35);
+            this.btnHapus.TabIndex = 8;
             this.btnHapus.Text = "🗑️ Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
-
-            btnY += btnHeight + 10;
-
+            // 
             // btnBatal
+            // 
             this.btnBatal.BackColor = System.Drawing.Color.FromArgb(158, 158, 158);
             this.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBatal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBatal.ForeColor = System.Drawing.Color.White;
-            this.btnBatal.Location = new System.Drawing.Point(15, btnY);
+            this.btnBatal.Location = new System.Drawing.Point(15, 345);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(210, btnHeight);
+            this.btnBatal.Size = new System.Drawing.Size(210, 35);
+            this.btnBatal.TabIndex = 9;
             this.btnBatal.Text = "↩️ Batal";
             this.btnBatal.UseVisualStyleBackColor = false;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
-
+            // 
             // panelGrid
+            // 
             this.panelGrid.BackColor = System.Drawing.Color.White;
             this.panelGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelGrid.Controls.Add(this.lblTotalKategori);
@@ -228,24 +232,28 @@ namespace FalazAgriMart.Forms.Admin
             this.panelGrid.Name = "panelGrid";
             this.panelGrid.Size = new System.Drawing.Size(790, 600);
             this.panelGrid.TabIndex = 2;
-
+            // 
             // lblCari
+            // 
             this.lblCari.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblCari.Location = new System.Drawing.Point(15, 15);
             this.lblCari.Name = "lblCari";
             this.lblCari.Size = new System.Drawing.Size(100, 25);
+            this.lblCari.TabIndex = 0;
             this.lblCari.Text = "🔍 Cari:";
             this.lblCari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-
+            // 
             // txtCari
+            // 
             this.txtCari.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtCari.Location = new System.Drawing.Point(80, 15);
             this.txtCari.Name = "txtCari";
             this.txtCari.Size = new System.Drawing.Size(550, 25);
-            this.txtCari.TabIndex = 0;
+            this.txtCari.TabIndex = 1;
             this.txtCari.TextChanged += new System.EventHandler(this.txtCari_TextChanged);
-
+            // 
             // btnRefresh
+            // 
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(33, 150, 243);
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -253,11 +261,13 @@ namespace FalazAgriMart.Forms.Admin
             this.btnRefresh.Location = new System.Drawing.Point(650, 12);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(120, 30);
+            this.btnRefresh.TabIndex = 2;
             this.btnRefresh.Text = "🔄 Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-
+            // 
             // dgvKategori
+            // 
             this.dgvKategori.AllowUserToAddRows = false;
             this.dgvKategori.AllowUserToDeleteRows = false;
             this.dgvKategori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -268,17 +278,20 @@ namespace FalazAgriMart.Forms.Admin
             this.dgvKategori.ReadOnly = true;
             this.dgvKategori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKategori.Size = new System.Drawing.Size(755, 500);
-            this.dgvKategori.TabIndex = 1;
+            this.dgvKategori.TabIndex = 3;
             this.dgvKategori.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKategori_CellClick);
-
+            // 
             // lblTotalKategori
+            // 
             this.lblTotalKategori.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTotalKategori.Location = new System.Drawing.Point(15, 565);
             this.lblTotalKategori.Name = "lblTotalKategori";
             this.lblTotalKategori.Size = new System.Drawing.Size(300, 25);
+            this.lblTotalKategori.TabIndex = 4;
             this.lblTotalKategori.Text = "Total: 0 kategori";
-
+            // 
             // FormManajemenKategori
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(243, 229, 245);
@@ -292,7 +305,6 @@ namespace FalazAgriMart.Forms.Admin
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manajemen Kategori - FALAZ AgriMart";
             this.Load += new System.EventHandler(this.FormManajemenKategori_Load);
-
             this.panelTop.ResumeLayout(false);
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
