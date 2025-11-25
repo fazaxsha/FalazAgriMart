@@ -127,5 +127,6 @@ namespace FalazAgriMart.Forms.Pegawai
             dtpMulai.Enabled = chkFilterTanggal.Checked;
             dtpAkhir.Enabled = chkFilterTanggal.Checked;
         }
+
     }
 }

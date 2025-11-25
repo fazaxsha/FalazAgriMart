@@ -115,5 +115,20 @@ namespace FalazAgriMart.Forms.Auth
         {
             txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
+
+        private void lblRightTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
