@@ -29,200 +29,212 @@
 
         private void InitializeComponent()
         {
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.chkShowPassword = new System.Windows.Forms.CheckBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.lblTestimonial = new System.Windows.Forms.Label();
-            this.lblQuote = new System.Windows.Forms.Label();
-            this.lblRightTitle = new System.Windows.Forms.Label();
-            this.panelLeft.SuspendLayout();
-            this.panelRight.SuspendLayout();
-            this.SuspendLayout();
-
+            panelLeft = new Panel();
+            btnCancel = new Button();
+            btnLogin = new Button();
+            chkShowPassword = new CheckBox();
+            txtPassword = new TextBox();
+            lblPassword = new Label();
+            txtUsername = new TextBox();
+            lblUsername = new Label();
+            lblSubtitle = new Label();
+            lblTitle = new Label();
+            panelRight = new Panel();
+            lblTestimonial = new Label();
+            lblQuote = new Label();
+            lblRightTitle = new Label();
+            panelLeft.SuspendLayout();
+            panelRight.SuspendLayout();
+            SuspendLayout();
+            // 
             // panelLeft
-            this.panelLeft.BackColor = System.Drawing.Color.White;
-            this.panelLeft.Controls.Add(this.btnCancel);
-            this.panelLeft.Controls.Add(this.btnLogin);
-            this.panelLeft.Controls.Add(this.chkShowPassword);
-            this.panelLeft.Controls.Add(this.txtPassword);
-            this.panelLeft.Controls.Add(this.lblPassword);
-            this.panelLeft.Controls.Add(this.txtUsername);
-            this.panelLeft.Controls.Add(this.lblUsername);
-            this.panelLeft.Controls.Add(this.lblSubtitle);
-            this.panelLeft.Controls.Add(this.lblTitle);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(500, 650);
-            this.panelLeft.TabIndex = 0;
-
-            // lblTitle
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
-            this.lblTitle.Location = new System.Drawing.Point(60, 100);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(380, 50);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Welcome to";
-
-            // lblSubtitle
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
-            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.lblSubtitle.Location = new System.Drawing.Point(60, 150);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(380, 50);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "FALAZ AgriMart";
-
-            // lblUsername
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
-            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(100, 100, 100);
-            this.lblUsername.Location = new System.Drawing.Point(60, 250);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(60, 15);
-            this.lblUsername.TabIndex = 2;
-            this.lblUsername.Text = "Username";
-
-            // txtUsername
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
-            this.txtUsername.Location = new System.Drawing.Point(60, 275);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(380, 20);
-            this.txtUsername.TabIndex = 3;
-            this.txtUsername.Text = "";
-            // Add padding effect with a panel wrapper if needed
-
-            // lblPassword
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
-            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(100, 100, 100);
-            this.lblPassword.Location = new System.Drawing.Point(60, 330);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(57, 15);
-            this.lblPassword.TabIndex = 4;
-            this.lblPassword.Text = "Password";
-
-            // txtPassword
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(250, 250, 250);
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(33, 33, 33);
-            this.txtPassword.Location = new System.Drawing.Point(60, 355);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(380, 20);
-            this.txtPassword.TabIndex = 5;
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
-
-            // chkShowPassword
-            this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chkShowPassword.ForeColor = System.Drawing.Color.FromArgb(100, 100, 100);
-            this.chkShowPassword.Location = new System.Drawing.Point(60, 395);
-            this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(108, 19);
-            this.chkShowPassword.TabIndex = 6;
-            this.chkShowPassword.Text = "Show Password";
-            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
-
-            // btnLogin
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(60, 450);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(380, 45);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-
+            // 
+            panelLeft.BackColor = Color.White;
+            panelLeft.Controls.Add(btnCancel);
+            panelLeft.Controls.Add(btnLogin);
+            panelLeft.Controls.Add(chkShowPassword);
+            panelLeft.Controls.Add(txtPassword);
+            panelLeft.Controls.Add(lblPassword);
+            panelLeft.Controls.Add(txtUsername);
+            panelLeft.Controls.Add(lblUsername);
+            panelLeft.Controls.Add(lblSubtitle);
+            panelLeft.Controls.Add(lblTitle);
+            panelLeft.Dock = DockStyle.Left;
+            panelLeft.Location = new Point(0, 0);
+            panelLeft.Name = "panelLeft";
+            panelLeft.Size = new Size(500, 650);
+            panelLeft.TabIndex = 0;
+            // 
             // btnCancel
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(200, 200, 200);
-            this.btnCancel.FlatAppearance.BorderSize = 1;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(100, 100, 100);
-            this.btnCancel.Location = new System.Drawing.Point(60, 510);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(380, 45);
-            this.btnCancel.TabIndex = 8;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-
+            // 
+            btnCancel.BackColor = Color.Transparent;
+            btnCancel.Cursor = Cursors.Hand;
+            btnCancel.FlatAppearance.BorderColor = Color.FromArgb(200, 200, 200);
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI", 11F);
+            btnCancel.ForeColor = Color.FromArgb(100, 100, 100);
+            btnCancel.Location = new Point(60, 510);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(380, 45);
+            btnCancel.TabIndex = 8;
+            btnCancel.Text = "Exit";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // btnLogin
+            // 
+            btnLogin.BackColor = Color.FromArgb(46, 125, 50);
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(60, 450);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(380, 45);
+            btnLogin.TabIndex = 7;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Font = new Font("Segoe UI", 9F);
+            chkShowPassword.ForeColor = Color.FromArgb(100, 100, 100);
+            chkShowPassword.Location = new Point(60, 395);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(108, 19);
+            chkShowPassword.TabIndex = 6;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
+            // txtPassword
+            // 
+            txtPassword.BackColor = Color.FromArgb(250, 250, 250);
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Segoe UI", 11F);
+            txtPassword.ForeColor = Color.FromArgb(33, 33, 33);
+            txtPassword.Location = new Point(60, 355);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(380, 20);
+            txtPassword.TabIndex = 5;
+            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.KeyPress += txtPassword_KeyPress;
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 9F);
+            lblPassword.ForeColor = Color.FromArgb(100, 100, 100);
+            lblPassword.Location = new Point(60, 330);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(57, 15);
+            lblPassword.TabIndex = 4;
+            lblPassword.Text = "Password";
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = Color.FromArgb(250, 250, 250);
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Segoe UI", 11F);
+            txtUsername.ForeColor = Color.FromArgb(33, 33, 33);
+            txtUsername.Location = new Point(60, 275);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(380, 20);
+            txtUsername.TabIndex = 3;
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 9F);
+            lblUsername.ForeColor = Color.FromArgb(100, 100, 100);
+            lblUsername.Location = new Point(60, 250);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(60, 15);
+            lblUsername.TabIndex = 2;
+            lblUsername.Text = "Username";
+            // 
+            // lblSubtitle
+            // 
+            lblSubtitle.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblSubtitle.ForeColor = Color.FromArgb(46, 125, 50);
+            lblSubtitle.Location = new Point(60, 150);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(380, 50);
+            lblSubtitle.TabIndex = 1;
+            lblSubtitle.Text = "FALAZ AgriMart";
+            // 
+            // lblTitle
+            // 
+            lblTitle.Font = new Font("Segoe UI", 28F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(33, 33, 33);
+            lblTitle.Location = new Point(60, 100);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(380, 50);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Welcome to";
+            // 
             // panelRight
-            this.panelRight.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.panelRight.Controls.Add(this.lblTestimonial);
-            this.panelRight.Controls.Add(this.lblQuote);
-            this.panelRight.Controls.Add(this.lblRightTitle);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight.Location = new System.Drawing.Point(500, 0);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(500, 650);
-            this.panelRight.TabIndex = 1;
-
-            // lblRightTitle
-            this.lblRightTitle.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold);
-            this.lblRightTitle.ForeColor = System.Drawing.Color.White;
-            this.lblRightTitle.Location = new System.Drawing.Point(50, 150);
-            this.lblRightTitle.Name = "lblRightTitle";
-            this.lblRightTitle.Size = new System.Drawing.Size(400, 200);
-            this.lblRightTitle.TabIndex = 0;
-            this.lblRightTitle.Text = "Grow Your Farm.";
-
-            // lblQuote
-            this.lblQuote.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Italic);
-            this.lblQuote.ForeColor = System.Drawing.Color.FromArgb(200, 230, 201);
-            this.lblQuote.Location = new System.Drawing.Point(50, 370);
-            this.lblQuote.Name = "lblQuote";
-            this.lblQuote.Size = new System.Drawing.Size(400, 80);
-            this.lblQuote.TabIndex = 1;
-            this.lblQuote.Text = "\"Connecting farmers with quality products and helping agricultural businesses thrive in the digital age.\"";
-
+            // 
+            panelRight.BackColor = Color.FromArgb(46, 125, 50);
+            panelRight.Controls.Add(lblTestimonial);
+            panelRight.Controls.Add(lblQuote);
+            panelRight.Controls.Add(lblRightTitle);
+            panelRight.Dock = DockStyle.Fill;
+            panelRight.Location = new Point(500, 0);
+            panelRight.Name = "panelRight";
+            panelRight.Size = new Size(500, 650);
+            panelRight.TabIndex = 1;
+            // 
             // lblTestimonial
-            this.lblTestimonial.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTestimonial.ForeColor = System.Drawing.Color.White;
-            this.lblTestimonial.Location = new System.Drawing.Point(50, 470);
-            this.lblTestimonial.Name = "lblTestimonial";
-            this.lblTestimonial.Size = new System.Drawing.Size(400, 60);
-            this.lblTestimonial.TabIndex = 2;
-            this.lblTestimonial.Text = "FALAZ Team\nAgricultural Solutions";
-
+            // 
+            lblTestimonial.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTestimonial.ForeColor = Color.White;
+            lblTestimonial.Location = new Point(50, 470);
+            lblTestimonial.Name = "lblTestimonial";
+            lblTestimonial.Size = new Size(400, 60);
+            lblTestimonial.TabIndex = 2;
+            lblTestimonial.Text = "FALAZ Team\nAgricultural Solutions";
+            // 
+            // lblQuote
+            // 
+            lblQuote.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
+            lblQuote.ForeColor = Color.FromArgb(200, 230, 201);
+            lblQuote.Location = new Point(50, 370);
+            lblQuote.Name = "lblQuote";
+            lblQuote.Size = new Size(400, 80);
+            lblQuote.TabIndex = 1;
+            lblQuote.Text = "\"Connecting farmers with quality products and helping agricultural businesses thrive in the digital age.\"";
+            // 
+            // lblRightTitle
+            // 
+            lblRightTitle.Font = new Font("Segoe UI", 48F, FontStyle.Bold);
+            lblRightTitle.ForeColor = Color.White;
+            lblRightTitle.Location = new Point(50, 150);
+            lblRightTitle.Name = "lblRightTitle";
+            lblRightTitle.Size = new Size(400, 200);
+            lblRightTitle.TabIndex = 0;
+            lblRightTitle.Text = "Grow Your Farm.";
+            // 
             // FormLogin
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 650);
-            this.Controls.Add(this.panelRight);
-            this.Controls.Add(this.panelLeft);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "FormLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login - FALAZ AgriMart";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
-            this.panelRight.ResumeLayout(false);
-            this.ResumeLayout(false);
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1000, 650);
+            Controls.Add(panelRight);
+            Controls.Add(panelLeft);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "FormLogin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login - FALAZ AgriMart";
+            Load += FormLogin_Load;
+            panelLeft.ResumeLayout(false);
+            panelLeft.PerformLayout();
+            panelRight.ResumeLayout(false);
+            ResumeLayout(false);
         }
     }
 }

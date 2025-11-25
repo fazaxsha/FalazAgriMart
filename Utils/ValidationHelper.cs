@@ -3,14 +3,10 @@ using System.Text.RegularExpressions;
 
 namespace FalazAgriMart.Utils
 {
-    /// <summary>
     /// Helper untuk validasi input
-    /// </summary>
     public static class ValidationHelper
     {
-        /// <summary>
         /// Validasi input tidak boleh kosong
-        /// </summary>
         public static bool IsNotEmpty(string input, string fieldName, out string errorMessage)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -22,9 +18,7 @@ namespace FalazAgriMart.Utils
             return true;
         }
 
-        /// <summary>
         /// Validasi email format
-        /// </summary>
         public static bool IsValidEmail(string email, out string errorMessage)
         {
             if (string.IsNullOrWhiteSpace(email))
@@ -44,9 +38,7 @@ namespace FalazAgriMart.Utils
             return true;
         }
 
-        /// <summary>
         /// Validasi nomor telepon (Indonesia)
-        /// </summary>
         public static bool IsValidPhoneNumber(string phone, out string errorMessage)
         {
             if (string.IsNullOrWhiteSpace(phone))
@@ -67,9 +59,7 @@ namespace FalazAgriMart.Utils
             return true;
         }
 
-        /// <summary>
         /// Validasi input numerik
-        /// </summary>
         public static bool IsValidNumber(string input, string fieldName, out decimal number, out string errorMessage)
         {
             if (!decimal.TryParse(input, out number))
@@ -88,9 +78,7 @@ namespace FalazAgriMart.Utils
             return true;
         }
 
-        /// <summary>
         /// Validasi input integer
-        /// </summary>
         public static bool IsValidInteger(string input, string fieldName, out int number, out string errorMessage)
         {
             if (!int.TryParse(input, out number))
@@ -109,9 +97,7 @@ namespace FalazAgriMart.Utils
             return true;
         }
 
-        /// <summary>
         /// Validasi panjang karakter
-        /// </summary>
         public static bool IsValidLength(string input, string fieldName, int minLength, int maxLength, out string errorMessage)
         {
             if (string.IsNullOrWhiteSpace(input))

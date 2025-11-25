@@ -2,10 +2,8 @@
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Class Pegawai mewarisi dari User - INHERITANCE
     /// Fokus pada operasional kasir dan transaksi
-    /// </summary>
     public class Pegawai : User
     {
         // Constructor

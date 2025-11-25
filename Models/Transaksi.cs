@@ -2,9 +2,7 @@
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Model Transaksi (Header)
-    /// </summary>
     public class Transaksi
     {
         private int _transaksiId;

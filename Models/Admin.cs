@@ -2,10 +2,8 @@
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Class Admin mewarisi dari User - INHERITANCE
     /// Memiliki hak akses penuh untuk manajemen sistem
-    /// </summary>
     public class Admin : User
     {
         // Constructor

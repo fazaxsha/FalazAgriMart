@@ -7,14 +7,10 @@ using System.Data;
 
 namespace FalazAgriMart.Repositories
 {
-    /// <summary>
     /// Repository untuk operasi CRUD Produk
-    /// </summary>
     public class ProdukRepository
     {
-        /// <summary>
         /// Get semua produk (dengan join kategori & supplier)
-        /// </summary>
         public DataTable GetAllProduk()
         {
             try
@@ -47,9 +43,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get produk by ID
-        /// </summary>
         public Produk GetProdukById(int produkId)
         {
             try
@@ -179,7 +173,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        // Perbaikan: Menambahkan parameter opsional 'kategori'
+        //parameter opsional 'kategori'
         public DataTable SearchProduk(string keyword, string kategori = null)
         {
             try

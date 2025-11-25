@@ -2,9 +2,7 @@
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Class Produk dengan ENCAPSULATION
-    /// </summary>
     public class Produk
     {
         // Private fields

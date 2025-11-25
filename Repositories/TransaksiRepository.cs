@@ -1,9 +1,4 @@
-﻿// ============================================
-// File: Repositories/TransaksiRepository.cs
-// Repository untuk save transaksi ke database
-// ============================================
-
-using FalazAgriMart.Database;
+﻿using FalazAgriMart.Database;
 using FalazAgriMart.Models;
 using Npgsql;
 using System;
@@ -12,15 +7,10 @@ using System.Data;
 
 namespace FalazAgriMart.Repositories
 {
-    /// <summary>
     /// Repository untuk operasi transaksi
-    /// </summary>
     public class TransaksiRepository
     {
-        /// <summary>
         /// Generate nomor transaksi otomatis
-        /// Format: TRX-YYYYMMDD-XXXX
-        /// </summary>
         public string GenerateNoTransaksi()
         {
             try
@@ -60,10 +50,8 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Simpan transaksi lengkap (header + detail)
         /// Return: transaksi_id jika sukses
-        /// </summary>
         public int SimpanTransaksi(Transaksi transaksi, List<DetailTransaksi> detailList)
         {
             NpgsqlConnection connection = null;
@@ -159,9 +147,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get transaksi by ID dengan detail
-        /// </summary>
         public DataTable GetTransaksiById(int transaksiId)
         {
             try
@@ -193,9 +179,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get detail transaksi by transaksi_id
-        /// </summary>
         public DataTable GetDetailTransaksi(int transaksiId)
         {
             try
@@ -225,9 +209,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get riwayat transaksi (untuk admin/pegawai)
-        /// </summary>
         public DataTable GetRiwayatTransaksi(int? userId = null, DateTime? tanggalMulai = null, DateTime? tanggalAkhir = null)
         {
             try

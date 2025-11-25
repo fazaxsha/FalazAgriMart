@@ -2,9 +2,7 @@
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Model DetailTransaksi (Item dalam transaksi)
-    /// </summary>
     public class DetailTransaksi
     {
         private int _detailId;

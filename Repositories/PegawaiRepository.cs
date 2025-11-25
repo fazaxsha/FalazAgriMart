@@ -6,15 +6,11 @@ using System.Data;
 
 namespace FalazAgriMart.Repositories
 {
-    /// <summary>
     /// Repository untuk operasi CRUD Pegawai
     /// Khusus untuk user dengan role 'Pegawai'
-    /// </summary>
     public class PegawaiRepository
     {
-        /// <summary>
-        /// Get semua pegawai (role = 'Pegawai' saja)
-        /// </summary>
+        /// Get semua pegawai (role = 'Pegawai')
         public DataTable GetAllPegawai()
         {
             try
@@ -40,9 +36,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get pegawai by ID
-        /// </summary>
         public DataRow GetPegawaiById(int userId)
         {
             try
@@ -78,9 +72,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Insert pegawai baru
-        /// </summary>
         public bool InsertPegawai(string username, string password, string namaLengkap)
         {
             try
@@ -110,9 +102,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Update pegawai (tanpa password)
-        /// </summary>
         public bool UpdatePegawai(int userId, string username, string namaLengkap)
         {
             try
@@ -140,9 +130,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Update password pegawai
-        /// </summary>
         public bool UpdatePasswordPegawai(int userId, string newPassword)
         {
             try
@@ -170,9 +158,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Delete pegawai (soft delete - ubah status jadi false)
-        /// </summary>
         public bool DeletePegawai(int userId)
         {
             try
@@ -196,9 +182,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Search pegawai by nama atau username
-        /// </summary>
         public DataTable SearchPegawai(string keyword)
         {
             try
@@ -231,9 +215,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Cek apakah username sudah ada
-        /// </summary>
         public bool IsUsernameExists(string username, int? excludeUserId = null)
         {
             try
@@ -263,9 +245,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get jumlah pegawai aktif
-        /// </summary>
         public int GetTotalPegawaiAktif()
         {
             try
@@ -279,9 +259,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Aktifkan kembali pegawai (set status = true)
-        /// </summary>
         public bool AktifkanPegawai(int userId)
         {
             try
@@ -305,9 +283,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get statistik transaksi pegawai (untuk evaluasi kinerja)
-        /// </summary>
         public DataTable GetStatistikPegawai(int userId)
         {
             try

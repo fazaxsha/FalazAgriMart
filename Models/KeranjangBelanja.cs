@@ -4,10 +4,8 @@ using System.Linq;
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Helper class untuk keranjang belanja temporary
     /// Data di memory, belum disimpan ke database
-    /// </summary>
     public class KeranjangBelanja
     {
         private List<DetailTransaksi> _items;
@@ -22,10 +20,8 @@ namespace FalazAgriMart.Models
             _items = new List<DetailTransaksi>();
         }
 
-        /// <summary>
         /// Tambah produk ke keranjang
         /// Jika produk sudah ada, tambah quantity
-        /// </summary>
         public void TambahItem(int produkId, string namaProduk, decimal hargaSatuan, int quantity, int stokTersedia)
         {
             // Cek apakah produk sudah ada di keranjang
@@ -60,9 +56,7 @@ namespace FalazAgriMart.Models
             }
         }
 
-        /// <summary>
         /// Update quantity item di keranjang
-        /// </summary>
         public void UpdateQuantity(int produkId, int newQuantity, int stokTersedia)
         {
             var item = _items.FirstOrDefault(i => i.ProdukId == produkId);
@@ -87,9 +81,7 @@ namespace FalazAgriMart.Models
             }
         }
 
-        /// <summary>
         /// Hapus item dari keranjang
-        /// </summary>
         public void HapusItem(int produkId)
         {
             var item = _items.FirstOrDefault(i => i.ProdukId == produkId);
@@ -99,49 +91,37 @@ namespace FalazAgriMart.Models
             }
         }
 
-        /// <summary>
         /// Hitung total belanja
-        /// </summary>
         public decimal GetTotalBelanja()
         {
             return _items.Sum(i => i.Subtotal);
         }
 
-        /// <summary>
         /// Get jumlah item di keranjang
-        /// </summary>
         public int GetJumlahItem()
         {
             return _items.Count;
         }
 
-        /// <summary>
         /// Get total quantity semua item
-        /// </summary>
         public int GetTotalQuantity()
         {
             return _items.Sum(i => i.Quantity);
         }
 
-        /// <summary>
         /// Kosongkan keranjang
-        /// </summary>
         public void Clear()
         {
             _items.Clear();
         }
 
-        /// <summary>
         /// Cek apakah keranjang kosong
-        /// </summary>
         public bool IsEmpty()
         {
             return _items.Count == 0;
         }
 
-        /// <summary>
         /// Get item by produk ID
-        /// </summary>
         public DetailTransaksi GetItemByProdukId(int produkId)
         {
             return _items.FirstOrDefault(i => i.ProdukId == produkId);

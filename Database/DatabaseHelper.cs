@@ -4,9 +4,6 @@ using System.Data;
 
 namespace FalazAgriMart.Database
 {
-    /// <summary>
-    /// Helper class untuk operasi database umum
-    /// </summary>
     public class DatabaseHelper
     {
         /// <summary>
@@ -35,9 +32,7 @@ namespace FalazAgriMart.Database
             }
         }
 
-        /// <summary>
         /// Execute query yang mengembalikan single value (COUNT, SUM, dll)
-        /// </summary>
         public static object ExecuteScalar(string query, NpgsqlParameter[] parameters = null)
         {
             try
@@ -61,9 +56,7 @@ namespace FalazAgriMart.Database
             }
         }
 
-        /// <summary>
         /// Execute query yang mengembalikan banyak data (SELECT)
-        /// </summary>
         public static DataTable ExecuteQuery(string query, NpgsqlParameter[] parameters = null)
         {
             try
@@ -93,9 +86,7 @@ namespace FalazAgriMart.Database
             }
         }
 
-        /// <summary>
         /// Execute query dengan DataReader (untuk performance lebih baik pada data besar)
-        /// </summary>
         public static NpgsqlDataReader ExecuteReader(string query, NpgsqlConnection connection, NpgsqlParameter[] parameters = null)
         {
             try

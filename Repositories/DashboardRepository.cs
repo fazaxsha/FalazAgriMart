@@ -5,14 +5,10 @@ using System.Data;
 
 namespace FalazAgriMart.Repositories
 {
-    /// <summary>
     /// Repository untuk data statistik dashboard
-    /// </summary>
     public class DashboardRepository
     {
-        /// <summary>
         /// Get statistik untuk Dashboard Admin
-        /// </summary>
         public DashboardAdminStats GetAdminStatistics()
         {
             try
@@ -47,9 +43,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get statistik untuk Dashboard Pegawai berdasarkan user_id
-        /// </summary>
         public DashboardPegawaiStats GetPegawaiStatistics(int userId)
         {
             try
@@ -86,9 +80,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get daftar produk dengan stok rendah (Smart Stock Alert)
-        /// </summary>
         public DataTable GetLowStockProducts()
         {
             try
@@ -117,9 +109,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get jumlah produk dengan stok rendah (untuk notifikasi)
-        /// </summary>
         public int GetLowStockCount()
         {
             try
@@ -139,9 +129,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get laporan penjualan per hari (untuk chart/grafik)
-        /// </summary>
         public DataTable GetSalesReport(int days = 7)
         {
             try
@@ -165,9 +153,7 @@ namespace FalazAgriMart.Repositories
             }
         }
 
-        /// <summary>
         /// Get produk terlaris
-        /// </summary>
         public DataTable GetTopSellingProducts(int limit = 10)
         {
             try
@@ -197,9 +183,7 @@ namespace FalazAgriMart.Repositories
     // Model untuk statistik dashboard
     // ============================================
 
-    /// <summary>
     /// Model untuk statistik Dashboard Admin
-    /// </summary>
     public class DashboardAdminStats
     {
         public int TotalProduk { get; set; }
@@ -216,9 +200,7 @@ namespace FalazAgriMart.Repositories
         }
     }
 
-    /// <summary>
     /// Model untuk statistik Dashboard Pegawai
-    /// </summary>
     public class DashboardPegawaiStats
     {
         public int TransaksiSayaHariIni { get; set; }

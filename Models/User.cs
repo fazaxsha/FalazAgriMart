@@ -2,11 +2,9 @@
 
 namespace FalazAgriMart.Models
 {
-    /// <summary>
     /// Abstract Base Class untuk User
     /// Menerapkan ENCAPSULATION (private fields + properties)
     /// Tidak bisa diinstansiasi langsung, harus melalui turunannya
-    /// </summary>
     public abstract class User
     {
         // Private fields - ENCAPSULATION

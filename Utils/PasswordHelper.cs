@@ -4,17 +4,12 @@ using System.Text;
 
 namespace FalazAgriMart.Utils
 {
-    /// <summary>
-    /// Helper untuk hashing dan verifikasi password
-    /// CATATAN: Untuk production, gunakan BCrypt.Net-Next (NuGet)
-    /// Ini versi sederhana menggunakan SHA256
-    /// </summary>
+    // Helper untuk hashing dan verifikasi password
+    // CATATAN: Untuk production, gunakan BCrypt.Net-Next (NuGet)
+    // Ini versi sederhana menggunakan SHA256
+
     public static class PasswordHelper
     {
-        /// <summary>
-        /// Hash password menggunakan SHA256
-        /// UNTUK DEMO SAJA - Production harus pakai BCrypt!
-        /// </summary>
         public static string HashPassword(string password)
         {
             if (string.IsNullOrEmpty(password))
@@ -32,9 +27,9 @@ namespace FalazAgriMart.Utils
             }
         }
 
-        /// <summary>
+
         /// Verify password dengan hash yang tersimpan
-        /// </summary>
+
         public static bool VerifyPassword(string password, string hashedPassword)
         {
             if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(hashedPassword))
@@ -44,9 +39,7 @@ namespace FalazAgriMart.Utils
             return hashInput.Equals(hashedPassword, StringComparison.OrdinalIgnoreCase);
         }
 
-        /// <summary>
         /// Generate random password (untuk fitur reset password)
-        /// </summary>
         public static string GenerateRandomPassword(int length = 8)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -61,9 +54,7 @@ namespace FalazAgriMart.Utils
             return new string(password);
         }
 
-        /// <summary>
         /// Validasi kekuatan password
-        /// </summary>
         public static bool IsPasswordStrong(string password)
         {
             if (string.IsNullOrEmpty(password) || password.Length < 6)
