@@ -102,9 +102,9 @@ namespace FalazAgriMart.Forms.Admin
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(350, 600);
             this.panelForm.TabIndex = 1;
-            // 
+
             // lblNamaKategori
-            // 
+
             this.lblNamaKategori.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblNamaKategori.Location = new System.Drawing.Point(15, 20);
             this.lblNamaKategori.Name = "lblNamaKategori";

@@ -53,7 +53,7 @@ namespace FalazAgriMart.Utils
 
             return new string(password);
         }
-
+    
         /// Validasi kekuatan password
         public static bool IsPasswordStrong(string password)
         {

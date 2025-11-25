@@ -1,9 +1,4 @@
-﻿// ============================================
-// File: Forms/Admin/FormManajemenPegawai.Designer.cs
-// Designer code untuk FormManajemenPegawai
-// ============================================
-
-namespace FalazAgriMart.Forms.Admin
+﻿namespace FalazAgriMart.Forms.Admin
 {
     partial class FormManajemenPegawai
     {

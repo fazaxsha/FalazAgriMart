@@ -44,418 +44,465 @@
 
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.lblLoginTime = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.panelSidebar = new System.Windows.Forms.Panel();
-            this.btnManajemenProduk = new System.Windows.Forms.Button();
-            this.btnManajemenPegawai = new System.Windows.Forms.Button();
-            this.btnManajemenSupplier = new System.Windows.Forms.Button();
-            this.btnManajemenKategori = new System.Windows.Forms.Button();
-            this.btnRiwayatTransaksi = new System.Windows.Forms.Button();
-            this.btnLaporanKeuangan = new System.Windows.Forms.Button();
-            this.btnCekStok = new System.Windows.Forms.Button();
-            this.btnUbahPassword = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.panelContent = new System.Windows.Forms.Panel();
-            this.panelStatistik1 = new System.Windows.Forms.Panel();
-            this.lblStatTitle1 = new System.Windows.Forms.Label();
-            this.lblTotalProduk = new System.Windows.Forms.Label();
-            this.panelStatistik2 = new System.Windows.Forms.Panel();
-            this.lblStatTitle2 = new System.Windows.Forms.Label();
-            this.lblTotalPegawai = new System.Windows.Forms.Label();
-            this.panelStatistik3 = new System.Windows.Forms.Panel();
-            this.lblStatTitle3 = new System.Windows.Forms.Label();
-            this.lblTotalTransaksi = new System.Windows.Forms.Label();
-            this.panelStatistik4 = new System.Windows.Forms.Panel();
-            this.lblStatTitle4 = new System.Windows.Forms.Label();
-            this.lblTotalPendapatan = new System.Windows.Forms.Label();
-
-            this.panelHeader.SuspendLayout();
-            this.panelSidebar.SuspendLayout();
-            this.panelContent.SuspendLayout();
-            this.panelStatistik1.SuspendLayout();
-            this.panelStatistik2.SuspendLayout();
-            this.panelStatistik3.SuspendLayout();
-            this.panelStatistik4.SuspendLayout();
-            this.SuspendLayout();
-
+            panelHeader = new Panel();
+            btnRefresh = new Button();
+            lblLoginTime = new Label();
+            lblRole = new Label();
+            lblWelcome = new Label();
+            lblTitle = new Label();
+            panelSidebar = new Panel();
+            btnLogout = new Button();
+            btnUbahPassword = new Button();
+            btnCekStok = new Button();
+            btnLaporanKeuangan = new Button();
+            btnRiwayatTransaksi = new Button();
+            btnManajemenKategori = new Button();
+            btnManajemenSupplier = new Button();
+            btnManajemenPegawai = new Button();
+            btnManajemenProduk = new Button();
+            panelContent = new Panel();
+            panelStatistik4 = new Panel();
+            lblTotalPendapatan = new Label();
+            lblStatTitle4 = new Label();
+            panelStatistik3 = new Panel();
+            lblTotalTransaksi = new Label();
+            lblStatTitle3 = new Label();
+            panelStatistik2 = new Panel();
+            lblTotalPegawai = new Label();
+            lblStatTitle2 = new Label();
+            panelStatistik1 = new Panel();
+            lblTotalProduk = new Label();
+            lblStatTitle1 = new Label();
+            panelHeader.SuspendLayout();
+            panelSidebar.SuspendLayout();
+            panelContent.SuspendLayout();
+            panelStatistik4.SuspendLayout();
+            panelStatistik3.SuspendLayout();
+            panelStatistik2.SuspendLayout();
+            panelStatistik1.SuspendLayout();
+            SuspendLayout();
+            // 
             // panelHeader
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.panelHeader.Controls.Add(this.btnRefresh);
-            this.panelHeader.Controls.Add(this.lblLoginTime);
-            this.panelHeader.Controls.Add(this.lblRole);
-            this.panelHeader.Controls.Add(this.lblWelcome);
-            this.panelHeader.Controls.Add(this.lblTitle);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1200, 80);
-            this.panelHeader.TabIndex = 0;
-
-            // lblTitle
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(300, 35);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "🌾 FALAZ AgriMart";
-
-            // lblWelcome
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(20, 50);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(400, 25);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Selamat Datang, Admin!";
-
-            // lblRole
-            this.lblRole.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(900, 20);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(280, 25);
-            this.lblRole.TabIndex = 2;
-            this.lblRole.Text = "Role: Administrator";
-            this.lblRole.TextAlign = System.Drawing.ContentAlignment.TopRight;
-
-            // lblLoginTime
-            this.lblLoginTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblLoginTime.ForeColor = System.Drawing.Color.White;
-            this.lblLoginTime.Location = new System.Drawing.Point(900, 45);
-            this.lblLoginTime.Name = "lblLoginTime";
-            this.lblLoginTime.Size = new System.Drawing.Size(280, 25);
-            this.lblLoginTime.TabIndex = 3;
-            this.lblLoginTime.Text = "Login: 01/01/2025 08:00";
-            this.lblLoginTime.TextAlign = System.Drawing.ContentAlignment.TopRight;
-
+            // 
+            panelHeader.BackColor = Color.FromArgb(46, 125, 50);
+            panelHeader.Controls.Add(btnRefresh);
+            panelHeader.Controls.Add(lblLoginTime);
+            panelHeader.Controls.Add(lblRole);
+            panelHeader.Controls.Add(lblWelcome);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Margin = new Padding(4, 3, 4, 3);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1400, 92);
+            panelHeader.TabIndex = 0;
+            // 
             // btnRefresh
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(56, 142, 60);
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(750, 25);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(100, 30);
-            this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "🔄 Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-
+            // 
+            btnRefresh.BackColor = Color.FromArgb(56, 142, 60);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnRefresh.ForeColor = Color.White;
+            btnRefresh.Location = new Point(875, 29);
+            btnRefresh.Margin = new Padding(4, 3, 4, 3);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(117, 35);
+            btnRefresh.TabIndex = 4;
+            btnRefresh.Text = "🔄 Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
+            // lblLoginTime
+            // 
+            lblLoginTime.Font = new Font("Segoe UI", 9F);
+            lblLoginTime.ForeColor = Color.White;
+            lblLoginTime.Location = new Point(1050, 52);
+            lblLoginTime.Margin = new Padding(4, 0, 4, 0);
+            lblLoginTime.Name = "lblLoginTime";
+            lblLoginTime.Size = new Size(327, 29);
+            lblLoginTime.TabIndex = 3;
+            lblLoginTime.Text = "Login: 01/01/2025 08:00";
+            lblLoginTime.TextAlign = ContentAlignment.TopRight;
+            // 
+            // lblRole
+            // 
+            lblRole.Font = new Font("Segoe UI", 10F);
+            lblRole.ForeColor = Color.White;
+            lblRole.Location = new Point(1050, 23);
+            lblRole.Margin = new Padding(4, 0, 4, 0);
+            lblRole.Name = "lblRole";
+            lblRole.Size = new Size(327, 29);
+            lblRole.TabIndex = 2;
+            lblRole.Text = "Role: Administrator";
+            lblRole.TextAlign = ContentAlignment.TopRight;
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.Font = new Font("Segoe UI", 11F);
+            lblWelcome.ForeColor = Color.White;
+            lblWelcome.Location = new Point(23, 58);
+            lblWelcome.Margin = new Padding(4, 0, 4, 0);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(467, 29);
+            lblWelcome.TabIndex = 1;
+            lblWelcome.Text = "Selamat Datang, Admin!";
+            // 
+            // lblTitle
+            // 
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(23, 12);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(350, 40);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "🌱 FALAZ AgriMart";
+            // 
             // panelSidebar
-            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(27, 94, 32);
-            this.panelSidebar.Controls.Add(this.btnLogout);
-            this.panelSidebar.Controls.Add(this.btnUbahPassword);
-            this.panelSidebar.Controls.Add(this.btnCekStok);
-            this.panelSidebar.Controls.Add(this.btnLaporanKeuangan);
-            this.panelSidebar.Controls.Add(this.btnRiwayatTransaksi);
-            this.panelSidebar.Controls.Add(this.btnManajemenKategori);
-            this.panelSidebar.Controls.Add(this.btnManajemenSupplier);
-            this.panelSidebar.Controls.Add(this.btnManajemenPegawai);
-            this.panelSidebar.Controls.Add(this.btnManajemenProduk);
-            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSidebar.Location = new System.Drawing.Point(0, 80);
-            this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(250, 620);
-            this.panelSidebar.TabIndex = 1;
-
-            // Buttons Sidebar
-            //int yPosition = 20;
-            //int buttonHeight = 50;
-            //int spacing = 10;
-
-            // btnManajemenProduk
-            this.btnManajemenProduk.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnManajemenProduk.FlatAppearance.BorderSize = 0;
-            this.btnManajemenProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManajemenProduk.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnManajemenProduk.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenProduk.Location = new System.Drawing.Point(10, 20);
-            this.btnManajemenProduk.Name = "btnManajemenProduk";
-            this.btnManajemenProduk.Size = new System.Drawing.Size(230, 50);
-            this.btnManajemenProduk.TabIndex = 0;
-            this.btnManajemenProduk.Text = "📦 Manajemen Produk";
-            this.btnManajemenProduk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManajemenProduk.UseVisualStyleBackColor = false;
-            this.btnManajemenProduk.Click += new System.EventHandler(this.btnManajemenProduk_Click);
-            //yPosition += buttonHeight + spacing;
-
-            // btnManajemenPegawai
-            this.btnManajemenPegawai.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnManajemenPegawai.FlatAppearance.BorderSize = 0;
-            this.btnManajemenPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManajemenPegawai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnManajemenPegawai.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenPegawai.Location = new System.Drawing.Point(10, 80); // 80
-            this.btnManajemenPegawai.Name = "btnManajemenPegawai";
-            this.btnManajemenPegawai.Size = new System.Drawing.Size(230, 50);
-            this.btnManajemenPegawai.TabIndex = 1;
-            this.btnManajemenPegawai.Text = "👥 Manajemen Pegawai";
-            this.btnManajemenPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManajemenPegawai.UseVisualStyleBackColor = false;
-            this.btnManajemenPegawai.Click += new System.EventHandler(this.btnManajemenPegawai_Click);
-            ////yPosition += buttonHeight + spacing;
-
-            // btnManajemenSupplier
-            this.btnManajemenSupplier.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnManajemenSupplier.FlatAppearance.BorderSize = 0;
-            this.btnManajemenSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManajemenSupplier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnManajemenSupplier.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenSupplier.Location = new System.Drawing.Point(10, 140); // 80 + 60
-            this.btnManajemenSupplier.Name = "btnManajemenSupplier";
-            this.btnManajemenSupplier.Size = new System.Drawing.Size(230, 50);
-            this.btnManajemenSupplier.TabIndex = 2;
-            this.btnManajemenSupplier.Text = "🚚 Manajemen Supplier";
-            this.btnManajemenSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManajemenSupplier.UseVisualStyleBackColor = false;
-            this.btnManajemenSupplier.Click += new System.EventHandler(this.btnManajemenSupplier_Click);
-            ////yPosition += buttonHeight + spacing;
-
-            // btnManajemenKategori
-            this.btnManajemenKategori.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnManajemenKategori.FlatAppearance.BorderSize = 0;
-            this.btnManajemenKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManajemenKategori.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnManajemenKategori.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenKategori.Location = new System.Drawing.Point(10, 200);
-            this.btnManajemenKategori.Name = "btnManajemenKategori";
-            this.btnManajemenKategori.Size = new System.Drawing.Size(230, 50);
-            this.btnManajemenKategori.TabIndex = 3;
-            this.btnManajemenKategori.Text = "📋 Manajemen Kategori";
-            this.btnManajemenKategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManajemenKategori.UseVisualStyleBackColor = false;
-            this.btnManajemenKategori.Click += new System.EventHandler(this.btnManajemenKategori_Click);
-            ////yPosition += buttonHeight + spacing;
-
-            // btnRiwayatTransaksi
-            this.btnRiwayatTransaksi.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnRiwayatTransaksi.FlatAppearance.BorderSize = 0;
-            this.btnRiwayatTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRiwayatTransaksi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRiwayatTransaksi.ForeColor = System.Drawing.Color.White;
-            this.btnRiwayatTransaksi.Location = new System.Drawing.Point(10, 260);
-            this.btnRiwayatTransaksi.Name = "btnRiwayatTransaksi";
-            this.btnRiwayatTransaksi.Size = new System.Drawing.Size(230, 50);
-            this.btnRiwayatTransaksi.TabIndex = 4;
-            this.btnRiwayatTransaksi.Text = "📜 Riwayat Transaksi";
-            this.btnRiwayatTransaksi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRiwayatTransaksi.UseVisualStyleBackColor = false;
-            this.btnRiwayatTransaksi.Click += new System.EventHandler(this.btnRiwayatTransaksi_Click);
-            ////yPosition += buttonHeight + spacing;
-
-            // btnLaporanKeuangan
-            this.btnLaporanKeuangan.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnLaporanKeuangan.FlatAppearance.BorderSize = 0;
-            this.btnLaporanKeuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLaporanKeuangan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLaporanKeuangan.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKeuangan.Location = new System.Drawing.Point(10, 320);
-            this.btnLaporanKeuangan.Name = "btnLaporanKeuangan";
-            this.btnLaporanKeuangan.Size = new System.Drawing.Size(230, 50);
-            this.btnLaporanKeuangan.TabIndex = 5;
-            this.btnLaporanKeuangan.Text = "💰 Laporan Keuangan";
-            this.btnLaporanKeuangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLaporanKeuangan.UseVisualStyleBackColor = false;
-            this.btnLaporanKeuangan.Click += new System.EventHandler(this.btnLaporanKeuangan_Click);
-            //yPosition += buttonHeight + spacing;
-
-            // btnCekStok
-            this.btnCekStok.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnCekStok.FlatAppearance.BorderSize = 0;
-            this.btnCekStok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCekStok.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCekStok.ForeColor = System.Drawing.Color.White;
-            this.btnCekStok.Location = new System.Drawing.Point(10, 380);
-            this.btnCekStok.Name = "btnCekStok";
-            this.btnCekStok.Size = new System.Drawing.Size(230, 50);
-            this.btnCekStok.TabIndex = 6;
-            this.btnCekStok.Text = "📊 Cek Stok Produk";
-            this.btnCekStok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCekStok.UseVisualStyleBackColor = false;
-            this.btnCekStok.Click += new System.EventHandler(this.btnCekStok_Click);
-            //yPosition += buttonHeight + spacing;
-
-            // btnUbahPassword
-            this.btnUbahPassword.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
-            this.btnUbahPassword.FlatAppearance.BorderSize = 0;
-            this.btnUbahPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUbahPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnUbahPassword.ForeColor = System.Drawing.Color.White;
-            this.btnUbahPassword.Location = new System.Drawing.Point(10, 440);
-            this.btnUbahPassword.Name = "btnUbahPassword";
-            this.btnUbahPassword.Size = new System.Drawing.Size(230, 50);
-            this.btnUbahPassword.TabIndex = 7;
-            this.btnUbahPassword.Text = "🔒 Ubah Password";
-            this.btnUbahPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUbahPassword.UseVisualStyleBackColor = false;
-            this.btnUbahPassword.Click += new System.EventHandler(this.btnUbahPassword_Click);
-            //yPosition += buttonHeight + spacing;
-
+            // 
+            panelSidebar.BackColor = Color.FromArgb(27, 94, 32);
+            panelSidebar.Controls.Add(btnLogout);
+            panelSidebar.Controls.Add(btnUbahPassword);
+            panelSidebar.Controls.Add(btnCekStok);
+            panelSidebar.Controls.Add(btnLaporanKeuangan);
+            panelSidebar.Controls.Add(btnRiwayatTransaksi);
+            panelSidebar.Controls.Add(btnManajemenKategori);
+            panelSidebar.Controls.Add(btnManajemenSupplier);
+            panelSidebar.Controls.Add(btnManajemenPegawai);
+            panelSidebar.Controls.Add(btnManajemenProduk);
+            panelSidebar.Dock = DockStyle.Left;
+            panelSidebar.Location = new Point(0, 92);
+            panelSidebar.Margin = new Padding(4, 3, 4, 3);
+            panelSidebar.Name = "panelSidebar";
+            panelSidebar.Size = new Size(292, 716);
+            panelSidebar.TabIndex = 1;
+            // 
             // btnLogout
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(211, 47, 47);
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(10, 550);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(230, 50);
-            this.btnLogout.TabIndex = 8;
-            this.btnLogout.Text = "🚪 Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-
+            // 
+            btnLogout.BackColor = Color.FromArgb(211, 47, 47);
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(12, 635);
+            btnLogout.Margin = new Padding(4, 3, 4, 3);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(268, 58);
+            btnLogout.TabIndex = 8;
+            btnLogout.Text = "🚪 Logout";
+            btnLogout.TextAlign = ContentAlignment.MiddleLeft;
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // btnUbahPassword
+            // 
+            btnUbahPassword.BackColor = Color.FromArgb(46, 125, 50);
+            btnUbahPassword.FlatAppearance.BorderSize = 0;
+            btnUbahPassword.FlatStyle = FlatStyle.Flat;
+            btnUbahPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnUbahPassword.ForeColor = Color.White;
+            btnUbahPassword.Location = new Point(12, 508);
+            btnUbahPassword.Margin = new Padding(4, 3, 4, 3);
+            btnUbahPassword.Name = "btnUbahPassword";
+            btnUbahPassword.Size = new Size(268, 58);
+            btnUbahPassword.TabIndex = 7;
+            btnUbahPassword.Text = "🔒 Ubah Password";
+            btnUbahPassword.TextAlign = ContentAlignment.MiddleLeft;
+            btnUbahPassword.UseVisualStyleBackColor = false;
+            btnUbahPassword.Click += btnUbahPassword_Click;
+            // 
+            // btnCekStok
+            // 
+            btnCekStok.BackColor = Color.FromArgb(46, 125, 50);
+            btnCekStok.FlatAppearance.BorderSize = 0;
+            btnCekStok.FlatStyle = FlatStyle.Flat;
+            btnCekStok.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnCekStok.ForeColor = Color.White;
+            btnCekStok.Location = new Point(12, 438);
+            btnCekStok.Margin = new Padding(4, 3, 4, 3);
+            btnCekStok.Name = "btnCekStok";
+            btnCekStok.Size = new Size(268, 58);
+            btnCekStok.TabIndex = 6;
+            btnCekStok.Text = "📊 Cek Stok Produk";
+            btnCekStok.TextAlign = ContentAlignment.MiddleLeft;
+            btnCekStok.UseVisualStyleBackColor = false;
+            btnCekStok.Click += btnCekStok_Click;
+            // 
+            // btnLaporanKeuangan
+            // 
+            btnLaporanKeuangan.BackColor = Color.FromArgb(46, 125, 50);
+            btnLaporanKeuangan.FlatAppearance.BorderSize = 0;
+            btnLaporanKeuangan.FlatStyle = FlatStyle.Flat;
+            btnLaporanKeuangan.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnLaporanKeuangan.ForeColor = Color.White;
+            btnLaporanKeuangan.Location = new Point(12, 369);
+            btnLaporanKeuangan.Margin = new Padding(4, 3, 4, 3);
+            btnLaporanKeuangan.Name = "btnLaporanKeuangan";
+            btnLaporanKeuangan.Size = new Size(268, 58);
+            btnLaporanKeuangan.TabIndex = 5;
+            btnLaporanKeuangan.Text = "💰 Laporan Keuangan";
+            btnLaporanKeuangan.TextAlign = ContentAlignment.MiddleLeft;
+            btnLaporanKeuangan.UseVisualStyleBackColor = false;
+            btnLaporanKeuangan.Click += btnLaporanKeuangan_Click;
+            // 
+            // btnRiwayatTransaksi
+            // 
+            btnRiwayatTransaksi.BackColor = Color.FromArgb(46, 125, 50);
+            btnRiwayatTransaksi.FlatAppearance.BorderSize = 0;
+            btnRiwayatTransaksi.FlatStyle = FlatStyle.Flat;
+            btnRiwayatTransaksi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnRiwayatTransaksi.ForeColor = Color.White;
+            btnRiwayatTransaksi.Location = new Point(12, 300);
+            btnRiwayatTransaksi.Margin = new Padding(4, 3, 4, 3);
+            btnRiwayatTransaksi.Name = "btnRiwayatTransaksi";
+            btnRiwayatTransaksi.Size = new Size(268, 58);
+            btnRiwayatTransaksi.TabIndex = 4;
+            btnRiwayatTransaksi.Text = "📜 Riwayat Transaksi";
+            btnRiwayatTransaksi.TextAlign = ContentAlignment.MiddleLeft;
+            btnRiwayatTransaksi.UseVisualStyleBackColor = false;
+            btnRiwayatTransaksi.Click += btnRiwayatTransaksi_Click;
+            // 
+            // btnManajemenKategori
+            // 
+            btnManajemenKategori.BackColor = Color.FromArgb(46, 125, 50);
+            btnManajemenKategori.FlatAppearance.BorderSize = 0;
+            btnManajemenKategori.FlatStyle = FlatStyle.Flat;
+            btnManajemenKategori.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnManajemenKategori.ForeColor = Color.White;
+            btnManajemenKategori.Location = new Point(12, 231);
+            btnManajemenKategori.Margin = new Padding(4, 3, 4, 3);
+            btnManajemenKategori.Name = "btnManajemenKategori";
+            btnManajemenKategori.Size = new Size(268, 58);
+            btnManajemenKategori.TabIndex = 3;
+            btnManajemenKategori.Text = "📋 Manajemen Kategori";
+            btnManajemenKategori.TextAlign = ContentAlignment.MiddleLeft;
+            btnManajemenKategori.UseVisualStyleBackColor = false;
+            btnManajemenKategori.Click += btnManajemenKategori_Click;
+            // 
+            // btnManajemenSupplier
+            // 
+            btnManajemenSupplier.BackColor = Color.FromArgb(46, 125, 50);
+            btnManajemenSupplier.FlatAppearance.BorderSize = 0;
+            btnManajemenSupplier.FlatStyle = FlatStyle.Flat;
+            btnManajemenSupplier.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnManajemenSupplier.ForeColor = Color.White;
+            btnManajemenSupplier.Location = new Point(12, 162);
+            btnManajemenSupplier.Margin = new Padding(4, 3, 4, 3);
+            btnManajemenSupplier.Name = "btnManajemenSupplier";
+            btnManajemenSupplier.Size = new Size(268, 58);
+            btnManajemenSupplier.TabIndex = 2;
+            btnManajemenSupplier.Text = "🚚 Manajemen Supplier";
+            btnManajemenSupplier.TextAlign = ContentAlignment.MiddleLeft;
+            btnManajemenSupplier.UseVisualStyleBackColor = false;
+            btnManajemenSupplier.Click += btnManajemenSupplier_Click;
+            // 
+            // btnManajemenPegawai
+            // 
+            btnManajemenPegawai.BackColor = Color.FromArgb(46, 125, 50);
+            btnManajemenPegawai.FlatAppearance.BorderSize = 0;
+            btnManajemenPegawai.FlatStyle = FlatStyle.Flat;
+            btnManajemenPegawai.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnManajemenPegawai.ForeColor = Color.White;
+            btnManajemenPegawai.Location = new Point(12, 92);
+            btnManajemenPegawai.Margin = new Padding(4, 3, 4, 3);
+            btnManajemenPegawai.Name = "btnManajemenPegawai";
+            btnManajemenPegawai.Size = new Size(268, 58);
+            btnManajemenPegawai.TabIndex = 1;
+            btnManajemenPegawai.Text = "👥 Manajemen Pegawai";
+            btnManajemenPegawai.TextAlign = ContentAlignment.MiddleLeft;
+            btnManajemenPegawai.UseVisualStyleBackColor = false;
+            btnManajemenPegawai.Click += btnManajemenPegawai_Click;
+            // 
+            // btnManajemenProduk
+            // 
+            btnManajemenProduk.BackColor = Color.FromArgb(46, 125, 50);
+            btnManajemenProduk.FlatAppearance.BorderSize = 0;
+            btnManajemenProduk.FlatStyle = FlatStyle.Flat;
+            btnManajemenProduk.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnManajemenProduk.ForeColor = Color.White;
+            btnManajemenProduk.Location = new Point(12, 23);
+            btnManajemenProduk.Margin = new Padding(4, 3, 4, 3);
+            btnManajemenProduk.Name = "btnManajemenProduk";
+            btnManajemenProduk.Size = new Size(268, 58);
+            btnManajemenProduk.TabIndex = 0;
+            btnManajemenProduk.Text = "📦 Manajemen Produk";
+            btnManajemenProduk.TextAlign = ContentAlignment.MiddleLeft;
+            btnManajemenProduk.UseVisualStyleBackColor = false;
+            btnManajemenProduk.Click += btnManajemenProduk_Click;
+            // 
             // panelContent
-            this.panelContent.BackColor = System.Drawing.Color.FromArgb(232, 245, 233);
-            this.panelContent.Controls.Add(this.panelStatistik4);
-            this.panelContent.Controls.Add(this.panelStatistik3);
-            this.panelContent.Controls.Add(this.panelStatistik2);
-            this.panelContent.Controls.Add(this.panelStatistik1);
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(250, 80);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(950, 620);
-            this.panelContent.TabIndex = 2;
-
-            // Statistik Panels
-            int panelWidth = 200;
-            int panelHeight = 120;
-            int startX = 50;
-            int startY = 50;
-            int gap = 30;
-
-            // panelStatistik1 - Total Produk
-            this.panelStatistik1.BackColor = System.Drawing.Color.FromArgb(33, 150, 243);
-            this.panelStatistik1.Controls.Add(this.lblTotalProduk);
-            this.panelStatistik1.Controls.Add(this.lblStatTitle1);
-            this.panelStatistik1.Location = new System.Drawing.Point(startX, startY);
-            this.panelStatistik1.Name = "panelStatistik1";
-            this.panelStatistik1.Size = new System.Drawing.Size(panelWidth, panelHeight);
-            this.panelStatistik1.TabIndex = 0;
-
-            this.lblStatTitle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatTitle1.ForeColor = System.Drawing.Color.White;
-            this.lblStatTitle1.Location = new System.Drawing.Point(10, 15);
-            this.lblStatTitle1.Name = "lblStatTitle1";
-            this.lblStatTitle1.Size = new System.Drawing.Size(180, 25);
-            this.lblStatTitle1.TabIndex = 0;
-            this.lblStatTitle1.Text = "Total Produk";
-
-            this.lblTotalProduk.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblTotalProduk.ForeColor = System.Drawing.Color.White;
-            this.lblTotalProduk.Location = new System.Drawing.Point(10, 50);
-            this.lblTotalProduk.Name = "lblTotalProduk";
-            this.lblTotalProduk.Size = new System.Drawing.Size(180, 50);
-            this.lblTotalProduk.TabIndex = 1;
-            this.lblTotalProduk.Text = "0";
-            this.lblTotalProduk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
-            // panelStatistik2 - Total Pegawai
-            this.panelStatistik2.BackColor = System.Drawing.Color.FromArgb(76, 175, 80);
-            this.panelStatistik2.Controls.Add(this.lblTotalPegawai);
-            this.panelStatistik2.Controls.Add(this.lblStatTitle2);
-            this.panelStatistik2.Location = new System.Drawing.Point(startX + panelWidth + gap, startY);
-            this.panelStatistik2.Name = "panelStatistik2";
-            this.panelStatistik2.Size = new System.Drawing.Size(panelWidth, panelHeight);
-            this.panelStatistik2.TabIndex = 1;
-
-            this.lblStatTitle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatTitle2.ForeColor = System.Drawing.Color.White;
-            this.lblStatTitle2.Location = new System.Drawing.Point(10, 15);
-            this.lblStatTitle2.Name = "lblStatTitle2";
-            this.lblStatTitle2.Size = new System.Drawing.Size(180, 25);
-            this.lblStatTitle2.TabIndex = 0;
-            this.lblStatTitle2.Text = "Total Pegawai";
-
-            this.lblTotalPegawai.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblTotalPegawai.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPegawai.Location = new System.Drawing.Point(10, 50);
-            this.lblTotalPegawai.Name = "lblTotalPegawai";
-            this.lblTotalPegawai.Size = new System.Drawing.Size(180, 50);
-            this.lblTotalPegawai.TabIndex = 1;
-            this.lblTotalPegawai.Text = "0";
-            this.lblTotalPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
-            // panelStatistik3 - Total Transaksi Hari Ini
-            this.panelStatistik3.BackColor = System.Drawing.Color.FromArgb(255, 152, 0);
-            this.panelStatistik3.Controls.Add(this.lblTotalTransaksi);
-            this.panelStatistik3.Controls.Add(this.lblStatTitle3);
-            this.panelStatistik3.Location = new System.Drawing.Point(startX + (panelWidth + gap) * 2, startY);
-            this.panelStatistik3.Name = "panelStatistik3";
-            this.panelStatistik3.Size = new System.Drawing.Size(panelWidth, panelHeight);
-            this.panelStatistik3.TabIndex = 2;
-
-            this.lblStatTitle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatTitle3.ForeColor = System.Drawing.Color.White;
-            this.lblStatTitle3.Location = new System.Drawing.Point(10, 15);
-            this.lblStatTitle3.Name = "lblStatTitle3";
-            this.lblStatTitle3.Size = new System.Drawing.Size(180, 25);
-            this.lblStatTitle3.TabIndex = 0;
-            this.lblStatTitle3.Text = "Transaksi Hari Ini";
-
-            this.lblTotalTransaksi.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblTotalTransaksi.ForeColor = System.Drawing.Color.White;
-            this.lblTotalTransaksi.Location = new System.Drawing.Point(10, 50);
-            this.lblTotalTransaksi.Name = "lblTotalTransaksi";
-            this.lblTotalTransaksi.Size = new System.Drawing.Size(180, 50);
-            this.lblTotalTransaksi.TabIndex = 1;
-            this.lblTotalTransaksi.Text = "0";
-            this.lblTotalTransaksi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
-            // panelStatistik4 - Total Pendapatan Hari Ini
-            this.panelStatistik4.BackColor = System.Drawing.Color.FromArgb(156, 39, 176);
-            this.panelStatistik4.Controls.Add(this.lblTotalPendapatan);
-            this.panelStatistik4.Controls.Add(this.lblStatTitle4);
-            this.panelStatistik4.Location = new System.Drawing.Point(startX + (panelWidth + gap) * 3, startY);
-            this.panelStatistik4.Name = "panelStatistik4";
-            this.panelStatistik4.Size = new System.Drawing.Size(panelWidth, panelHeight);
-            this.panelStatistik4.TabIndex = 3;
-
-            this.lblStatTitle4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblStatTitle4.ForeColor = System.Drawing.Color.White;
-            this.lblStatTitle4.Location = new System.Drawing.Point(10, 15);
-            this.lblStatTitle4.Name = "lblStatTitle4";
-            this.lblStatTitle4.Size = new System.Drawing.Size(180, 25);
-            this.lblStatTitle4.TabIndex = 0;
-            this.lblStatTitle4.Text = "Pendapatan Hari Ini";
-
-            this.lblTotalPendapatan.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTotalPendapatan.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPendapatan.Location = new System.Drawing.Point(10, 50);
-            this.lblTotalPendapatan.Name = "lblTotalPendapatan";
-            this.lblTotalPendapatan.Size = new System.Drawing.Size(180, 50);
-            this.lblTotalPendapatan.TabIndex = 1;
-            this.lblTotalPendapatan.Text = "Rp 0";
-            this.lblTotalPendapatan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
+            // 
+            panelContent.BackColor = Color.FromArgb(232, 245, 233);
+            panelContent.Controls.Add(panelStatistik4);
+            panelContent.Controls.Add(panelStatistik3);
+            panelContent.Controls.Add(panelStatistik2);
+            panelContent.Controls.Add(panelStatistik1);
+            panelContent.Dock = DockStyle.Fill;
+            panelContent.Location = new Point(292, 92);
+            panelContent.Margin = new Padding(4, 3, 4, 3);
+            panelContent.Name = "panelContent";
+            panelContent.Size = new Size(1108, 716);
+            panelContent.TabIndex = 2;
+            // 
+            // panelStatistik4
+            // 
+            panelStatistik4.BackColor = Color.FromArgb(156, 39, 176);
+            panelStatistik4.Controls.Add(lblTotalPendapatan);
+            panelStatistik4.Controls.Add(lblStatTitle4);
+            panelStatistik4.Location = new Point(412, 63);
+            panelStatistik4.Margin = new Padding(4, 3, 4, 3);
+            panelStatistik4.Name = "panelStatistik4";
+            panelStatistik4.Size = new Size(233, 138);
+            panelStatistik4.TabIndex = 3;
+            // 
+            // lblTotalPendapatan
+            // 
+            lblTotalPendapatan.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTotalPendapatan.ForeColor = Color.White;
+            lblTotalPendapatan.Location = new Point(12, 58);
+            lblTotalPendapatan.Margin = new Padding(4, 0, 4, 0);
+            lblTotalPendapatan.Name = "lblTotalPendapatan";
+            lblTotalPendapatan.Size = new Size(210, 58);
+            lblTotalPendapatan.TabIndex = 1;
+            lblTotalPendapatan.Text = "Rp 0";
+            lblTotalPendapatan.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblStatTitle4
+            // 
+            lblStatTitle4.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatTitle4.ForeColor = Color.White;
+            lblStatTitle4.Location = new Point(45, 17);
+            lblStatTitle4.Margin = new Padding(4, 0, 4, 0);
+            lblStatTitle4.Name = "lblStatTitle4";
+            lblStatTitle4.Size = new Size(143, 29);
+            lblStatTitle4.TabIndex = 0;
+            lblStatTitle4.Text = "Pendapatan Hari Ini";
+            // 
+            // panelStatistik3
+            // 
+            panelStatistik3.BackColor = Color.FromArgb(255, 152, 0);
+            panelStatistik3.Controls.Add(lblTotalTransaksi);
+            panelStatistik3.Controls.Add(lblStatTitle3);
+            panelStatistik3.Location = new Point(125, 225);
+            panelStatistik3.Margin = new Padding(4, 3, 4, 3);
+            panelStatistik3.Name = "panelStatistik3";
+            panelStatistik3.Size = new Size(233, 138);
+            panelStatistik3.TabIndex = 2;
+            // 
+            // lblTotalTransaksi
+            // 
+            lblTotalTransaksi.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblTotalTransaksi.ForeColor = Color.White;
+            lblTotalTransaksi.Location = new Point(12, 58);
+            lblTotalTransaksi.Margin = new Padding(4, 0, 4, 0);
+            lblTotalTransaksi.Name = "lblTotalTransaksi";
+            lblTotalTransaksi.Size = new Size(210, 58);
+            lblTotalTransaksi.TabIndex = 1;
+            lblTotalTransaksi.Text = "0";
+            lblTotalTransaksi.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblStatTitle3
+            // 
+            lblStatTitle3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatTitle3.ForeColor = Color.White;
+            lblStatTitle3.Location = new Point(54, 17);
+            lblStatTitle3.Margin = new Padding(4, 0, 4, 0);
+            lblStatTitle3.Name = "lblStatTitle3";
+            lblStatTitle3.Size = new Size(124, 29);
+            lblStatTitle3.TabIndex = 0;
+            lblStatTitle3.Text = "Transaksi Hari Ini";
+            // 
+            // panelStatistik2
+            // 
+            panelStatistik2.BackColor = Color.FromArgb(76, 175, 80);
+            panelStatistik2.Controls.Add(lblTotalPegawai);
+            panelStatistik2.Controls.Add(lblStatTitle2);
+            panelStatistik2.Location = new Point(412, 225);
+            panelStatistik2.Margin = new Padding(4, 3, 4, 3);
+            panelStatistik2.Name = "panelStatistik2";
+            panelStatistik2.Size = new Size(233, 138);
+            panelStatistik2.TabIndex = 1;
+            // 
+            // lblTotalPegawai
+            // 
+            lblTotalPegawai.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblTotalPegawai.ForeColor = Color.White;
+            lblTotalPegawai.Location = new Point(12, 58);
+            lblTotalPegawai.Margin = new Padding(4, 0, 4, 0);
+            lblTotalPegawai.Name = "lblTotalPegawai";
+            lblTotalPegawai.Size = new Size(210, 58);
+            lblTotalPegawai.TabIndex = 1;
+            lblTotalPegawai.Text = "0";
+            lblTotalPegawai.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblStatTitle2
+            // 
+            lblStatTitle2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatTitle2.ForeColor = Color.White;
+            lblStatTitle2.Location = new Point(68, 17);
+            lblStatTitle2.Margin = new Padding(4, 0, 4, 0);
+            lblStatTitle2.Name = "lblStatTitle2";
+            lblStatTitle2.Size = new Size(106, 29);
+            lblStatTitle2.TabIndex = 0;
+            lblStatTitle2.Text = "Total Pegawai";
+            // 
+            // panelStatistik1
+            // 
+            panelStatistik1.BackColor = Color.FromArgb(33, 150, 243);
+            panelStatistik1.Controls.Add(lblTotalProduk);
+            panelStatistik1.Controls.Add(lblStatTitle1);
+            panelStatistik1.Location = new Point(125, 63);
+            panelStatistik1.Margin = new Padding(4, 3, 4, 3);
+            panelStatistik1.Name = "panelStatistik1";
+            panelStatistik1.Size = new Size(233, 138);
+            panelStatistik1.TabIndex = 0;
+            // 
+            // lblTotalProduk
+            // 
+            lblTotalProduk.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblTotalProduk.ForeColor = Color.White;
+            lblTotalProduk.Location = new Point(12, 58);
+            lblTotalProduk.Margin = new Padding(4, 0, 4, 0);
+            lblTotalProduk.Name = "lblTotalProduk";
+            lblTotalProduk.Size = new Size(210, 58);
+            lblTotalProduk.TabIndex = 1;
+            lblTotalProduk.Text = "0";
+            lblTotalProduk.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblStatTitle1
+            // 
+            lblStatTitle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblStatTitle1.ForeColor = Color.White;
+            lblStatTitle1.Location = new Point(69, 17);
+            lblStatTitle1.Margin = new Padding(4, 0, 4, 0);
+            lblStatTitle1.Name = "lblStatTitle1";
+            lblStatTitle1.Size = new Size(96, 29);
+            lblStatTitle1.TabIndex = 0;
+            lblStatTitle1.Text = "Total Produk";
+            // 
             // FormDashboardAdmin
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
-            this.Controls.Add(this.panelContent);
-            this.Controls.Add(this.panelSidebar);
-            this.Controls.Add(this.panelHeader);
-            this.Name = "FormDashboardAdmin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard Admin - FALAZ AgriMart";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormDashboardAdmin_Load);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDashboardAdmin_FormClosing);
-            this.panelHeader.ResumeLayout(false);
-            this.panelSidebar.ResumeLayout(false);
-            this.panelContent.ResumeLayout(false);
-            this.panelStatistik1.ResumeLayout(false);
-            this.panelStatistik2.ResumeLayout(false);
-            this.panelStatistik3.ResumeLayout(false);
-            this.panelStatistik4.ResumeLayout(false);
-            this.ResumeLayout(false);
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1400, 808);
+            Controls.Add(panelContent);
+            Controls.Add(panelSidebar);
+            Controls.Add(panelHeader);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormDashboardAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Dashboard Admin - FALAZ AgriMart";
+            WindowState = FormWindowState.Maximized;
+            FormClosing += FormDashboardAdmin_FormClosing;
+            Load += FormDashboardAdmin_Load;
+            panelHeader.ResumeLayout(false);
+            panelSidebar.ResumeLayout(false);
+            panelContent.ResumeLayout(false);
+            panelStatistik4.ResumeLayout(false);
+            panelStatistik3.ResumeLayout(false);
+            panelStatistik2.ResumeLayout(false);
+            panelStatistik1.ResumeLayout(false);
+            ResumeLayout(false);
         }
     }
 }
