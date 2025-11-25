@@ -130,5 +130,15 @@ namespace FalazAgriMart.Forms.Auth
         {
 
         }
+
+        private void panelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

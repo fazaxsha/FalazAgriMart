@@ -14,9 +14,6 @@
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelRight;
         private System.Windows.Forms.Label lblSubtitle;
-        private System.Windows.Forms.Label lblRightTitle;
-        private System.Windows.Forms.Label lblQuote;
-        private System.Windows.Forms.Label lblTestimonial;
 
         protected override void Dispose(bool disposing)
         {
@@ -29,6 +26,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             panelLeft = new Panel();
             btnCancel = new Button();
             btnLogin = new Button();
@@ -40,11 +38,10 @@
             lblSubtitle = new Label();
             lblTitle = new Label();
             panelRight = new Panel();
-            lblTestimonial = new Label();
-            lblQuote = new Label();
-            lblRightTitle = new Label();
+            pictureBox1 = new PictureBox();
             panelLeft.SuspendLayout();
             panelRight.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelLeft
@@ -178,44 +175,23 @@
             // panelRight
             // 
             panelRight.BackColor = Color.FromArgb(46, 125, 50);
-            panelRight.Controls.Add(lblTestimonial);
-            panelRight.Controls.Add(lblQuote);
-            panelRight.Controls.Add(lblRightTitle);
+            panelRight.Controls.Add(pictureBox1);
             panelRight.Dock = DockStyle.Fill;
             panelRight.Location = new Point(500, 0);
             panelRight.Name = "panelRight";
             panelRight.Size = new Size(500, 650);
             panelRight.TabIndex = 1;
+            panelRight.Paint += panelRight_Paint;
             // 
-            // lblTestimonial
+            // pictureBox1
             // 
-            lblTestimonial.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblTestimonial.ForeColor = Color.White;
-            lblTestimonial.Location = new Point(50, 470);
-            lblTestimonial.Name = "lblTestimonial";
-            lblTestimonial.Size = new Size(400, 60);
-            lblTestimonial.TabIndex = 2;
-            lblTestimonial.Text = "FALAZ Team\nAgricultural Solutions";
-            // 
-            // lblQuote
-            // 
-            lblQuote.Font = new Font("Segoe UI", 11F, FontStyle.Italic);
-            lblQuote.ForeColor = Color.FromArgb(200, 230, 201);
-            lblQuote.Location = new Point(50, 370);
-            lblQuote.Name = "lblQuote";
-            lblQuote.Size = new Size(400, 80);
-            lblQuote.TabIndex = 1;
-            lblQuote.Text = "\"Connecting farmers with quality products and helping agricultural businesses thrive in the digital age.\"";
-            // 
-            // lblRightTitle
-            // 
-            lblRightTitle.Font = new Font("Segoe UI", 48F, FontStyle.Bold);
-            lblRightTitle.ForeColor = Color.White;
-            lblRightTitle.Location = new Point(50, 150);
-            lblRightTitle.Name = "lblRightTitle";
-            lblRightTitle.Size = new Size(400, 200);
-            lblRightTitle.TabIndex = 0;
-            lblRightTitle.Text = "Grow Your Farm.";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(629, 711);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
@@ -234,7 +210,10 @@
             panelLeft.ResumeLayout(false);
             panelLeft.PerformLayout();
             panelRight.ResumeLayout(false);
+            panelRight.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
+        private PictureBox pictureBox1;
     }
 }

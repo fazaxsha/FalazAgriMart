@@ -1,7 +1,4 @@
-﻿// ============================================
-// File: Program.cs
-// Entry Point Aplikasi FALAZ AgriMart
-// ============================================
+﻿
 
 using FalazAgriMart.Forms.Auth;
 using FalazAgriMart.Database;
@@ -12,9 +9,7 @@ namespace FalazAgriMart
 {
     static class Program
     {
-        /// <summary>
         /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -44,9 +39,7 @@ namespace FalazAgriMart
             }
         }
 
-        /// <summary>
         /// Test koneksi ke database
-        /// </summary>
         private static bool TestDatabaseConnection()
         {
             try
