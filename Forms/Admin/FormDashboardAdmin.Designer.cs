@@ -165,9 +165,9 @@
             this.panelSidebar.TabIndex = 1;
 
             // Buttons Sidebar
-            int yPosition = 20;
-            int buttonHeight = 50;
-            int spacing = 10;
+            //int yPosition = 20;
+            //int buttonHeight = 50;
+            //int spacing = 10;
 
             // btnManajemenProduk
             this.btnManajemenProduk.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -175,15 +175,15 @@
             this.btnManajemenProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManajemenProduk.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnManajemenProduk.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenProduk.Location = new System.Drawing.Point(10, yPosition);
+            this.btnManajemenProduk.Location = new System.Drawing.Point(10, 20);
             this.btnManajemenProduk.Name = "btnManajemenProduk";
-            this.btnManajemenProduk.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnManajemenProduk.Size = new System.Drawing.Size(230, 50);
             this.btnManajemenProduk.TabIndex = 0;
             this.btnManajemenProduk.Text = "📦 Manajemen Produk";
             this.btnManajemenProduk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManajemenProduk.UseVisualStyleBackColor = false;
             this.btnManajemenProduk.Click += new System.EventHandler(this.btnManajemenProduk_Click);
-            yPosition += buttonHeight + spacing;
+            //yPosition += buttonHeight + spacing;
 
             // btnManajemenPegawai
             this.btnManajemenPegawai.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -191,15 +191,15 @@
             this.btnManajemenPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManajemenPegawai.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnManajemenPegawai.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenPegawai.Location = new System.Drawing.Point(10, yPosition);
+            this.btnManajemenPegawai.Location = new System.Drawing.Point(10, 80); // 80
             this.btnManajemenPegawai.Name = "btnManajemenPegawai";
-            this.btnManajemenPegawai.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnManajemenPegawai.Size = new System.Drawing.Size(230, 50);
             this.btnManajemenPegawai.TabIndex = 1;
             this.btnManajemenPegawai.Text = "👥 Manajemen Pegawai";
             this.btnManajemenPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManajemenPegawai.UseVisualStyleBackColor = false;
             this.btnManajemenPegawai.Click += new System.EventHandler(this.btnManajemenPegawai_Click);
-            yPosition += buttonHeight + spacing;
+            ////yPosition += buttonHeight + spacing;
 
             // btnManajemenSupplier
             this.btnManajemenSupplier.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -207,15 +207,15 @@
             this.btnManajemenSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManajemenSupplier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnManajemenSupplier.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenSupplier.Location = new System.Drawing.Point(10, yPosition);
+            this.btnManajemenSupplier.Location = new System.Drawing.Point(10, 140); // 80 + 60
             this.btnManajemenSupplier.Name = "btnManajemenSupplier";
-            this.btnManajemenSupplier.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnManajemenSupplier.Size = new System.Drawing.Size(230, 50);
             this.btnManajemenSupplier.TabIndex = 2;
             this.btnManajemenSupplier.Text = "🚚 Manajemen Supplier";
             this.btnManajemenSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManajemenSupplier.UseVisualStyleBackColor = false;
             this.btnManajemenSupplier.Click += new System.EventHandler(this.btnManajemenSupplier_Click);
-            yPosition += buttonHeight + spacing;
+            ////yPosition += buttonHeight + spacing;
 
             // btnManajemenKategori
             this.btnManajemenKategori.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -223,15 +223,15 @@
             this.btnManajemenKategori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManajemenKategori.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnManajemenKategori.ForeColor = System.Drawing.Color.White;
-            this.btnManajemenKategori.Location = new System.Drawing.Point(10, yPosition);
+            this.btnManajemenKategori.Location = new System.Drawing.Point(10, 200);
             this.btnManajemenKategori.Name = "btnManajemenKategori";
-            this.btnManajemenKategori.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnManajemenKategori.Size = new System.Drawing.Size(230, 50);
             this.btnManajemenKategori.TabIndex = 3;
             this.btnManajemenKategori.Text = "📋 Manajemen Kategori";
             this.btnManajemenKategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManajemenKategori.UseVisualStyleBackColor = false;
             this.btnManajemenKategori.Click += new System.EventHandler(this.btnManajemenKategori_Click);
-            yPosition += buttonHeight + spacing;
+            ////yPosition += buttonHeight + spacing;
 
             // btnRiwayatTransaksi
             this.btnRiwayatTransaksi.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -239,15 +239,15 @@
             this.btnRiwayatTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRiwayatTransaksi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRiwayatTransaksi.ForeColor = System.Drawing.Color.White;
-            this.btnRiwayatTransaksi.Location = new System.Drawing.Point(10, yPosition);
+            this.btnRiwayatTransaksi.Location = new System.Drawing.Point(10, 260);
             this.btnRiwayatTransaksi.Name = "btnRiwayatTransaksi";
-            this.btnRiwayatTransaksi.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnRiwayatTransaksi.Size = new System.Drawing.Size(230, 50);
             this.btnRiwayatTransaksi.TabIndex = 4;
             this.btnRiwayatTransaksi.Text = "📜 Riwayat Transaksi";
             this.btnRiwayatTransaksi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRiwayatTransaksi.UseVisualStyleBackColor = false;
             this.btnRiwayatTransaksi.Click += new System.EventHandler(this.btnRiwayatTransaksi_Click);
-            yPosition += buttonHeight + spacing;
+            ////yPosition += buttonHeight + spacing;
 
             // btnLaporanKeuangan
             this.btnLaporanKeuangan.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -255,15 +255,15 @@
             this.btnLaporanKeuangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLaporanKeuangan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnLaporanKeuangan.ForeColor = System.Drawing.Color.White;
-            this.btnLaporanKeuangan.Location = new System.Drawing.Point(10, yPosition);
+            this.btnLaporanKeuangan.Location = new System.Drawing.Point(10, 320);
             this.btnLaporanKeuangan.Name = "btnLaporanKeuangan";
-            this.btnLaporanKeuangan.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnLaporanKeuangan.Size = new System.Drawing.Size(230, 50);
             this.btnLaporanKeuangan.TabIndex = 5;
             this.btnLaporanKeuangan.Text = "💰 Laporan Keuangan";
             this.btnLaporanKeuangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLaporanKeuangan.UseVisualStyleBackColor = false;
             this.btnLaporanKeuangan.Click += new System.EventHandler(this.btnLaporanKeuangan_Click);
-            yPosition += buttonHeight + spacing;
+            //yPosition += buttonHeight + spacing;
 
             // btnCekStok
             this.btnCekStok.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -271,15 +271,15 @@
             this.btnCekStok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCekStok.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnCekStok.ForeColor = System.Drawing.Color.White;
-            this.btnCekStok.Location = new System.Drawing.Point(10, yPosition);
+            this.btnCekStok.Location = new System.Drawing.Point(10, 380);
             this.btnCekStok.Name = "btnCekStok";
-            this.btnCekStok.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnCekStok.Size = new System.Drawing.Size(230, 50);
             this.btnCekStok.TabIndex = 6;
             this.btnCekStok.Text = "📊 Cek Stok Produk";
             this.btnCekStok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCekStok.UseVisualStyleBackColor = false;
             this.btnCekStok.Click += new System.EventHandler(this.btnCekStok_Click);
-            yPosition += buttonHeight + spacing;
+            //yPosition += buttonHeight + spacing;
 
             // btnUbahPassword
             this.btnUbahPassword.BackColor = System.Drawing.Color.FromArgb(46, 125, 50);
@@ -287,15 +287,15 @@
             this.btnUbahPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUbahPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnUbahPassword.ForeColor = System.Drawing.Color.White;
-            this.btnUbahPassword.Location = new System.Drawing.Point(10, yPosition);
+            this.btnUbahPassword.Location = new System.Drawing.Point(10, 440);
             this.btnUbahPassword.Name = "btnUbahPassword";
-            this.btnUbahPassword.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnUbahPassword.Size = new System.Drawing.Size(230, 50);
             this.btnUbahPassword.TabIndex = 7;
             this.btnUbahPassword.Text = "🔒 Ubah Password";
             this.btnUbahPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUbahPassword.UseVisualStyleBackColor = false;
             this.btnUbahPassword.Click += new System.EventHandler(this.btnUbahPassword_Click);
-            yPosition += buttonHeight + spacing;
+            //yPosition += buttonHeight + spacing;
 
             // btnLogout
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(211, 47, 47);
@@ -305,7 +305,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(10, 550);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(230, buttonHeight);
+            this.btnLogout.Size = new System.Drawing.Size(230, 50);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "🚪 Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

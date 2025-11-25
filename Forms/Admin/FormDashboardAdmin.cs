@@ -1,5 +1,6 @@
 ﻿using FalazAgriMart.Utils;
 using FalazAgriMart.Repositories;
+using FalazAgriMart.Forms.Pegawai;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -171,32 +172,24 @@ namespace FalazAgriMart.Forms.Admin
         {
             FormRiwayatTransaksi form = new FormRiwayatTransaksi();
             form.ShowDialog();
-            MessageBox.Show("Membuka Form Riwayat Transaksi", "Info",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnLaporanKeuangan_Click(object sender, EventArgs e)
         {
             FormLaporanKeuangan form = new FormLaporanKeuangan();
             form.ShowDialog();
-            MessageBox.Show("Membuka Form Laporan Keuangan", "Info",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnCekStok_Click(object sender, EventArgs e)
         {
-            //FormCekStok form = new FormCekStok();
-            //form.ShowDialog();
-            //MessageBox.Show("Membuka Form Cek Stok Produk", "Info",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormCekStok form = new FormCekStok();
+            form.ShowDialog();
         }
 
         private void btnUbahPassword_Click(object sender, EventArgs e)
         {
             FormUbahPassword form = new FormUbahPassword();
             form.ShowDialog();
-            MessageBox.Show("Membuka Form Ubah Password", "Info",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
