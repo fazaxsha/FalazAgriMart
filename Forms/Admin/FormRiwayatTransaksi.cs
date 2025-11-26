@@ -186,5 +186,10 @@ namespace FalazAgriMart.Forms.Admin
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

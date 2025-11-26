@@ -17,322 +17,323 @@
 
         private void InitializeComponent()
         {
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelFilter = new System.Windows.Forms.Panel();
-            this.btnLihatStruk = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.dtpAkhir = new System.Windows.Forms.DateTimePicker();
-            this.dtpMulai = new System.Windows.Forms.DateTimePicker();
-            this.chkFilterTanggal = new System.Windows.Forms.CheckBox();
-            this.lblSampai = new System.Windows.Forms.Label();
-            this.lblDari = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvTransaksi = new System.Windows.Forms.DataGridView();
-            this.panelInfo = new System.Windows.Forms.Panel();
-            this.lblTotalPendapatan = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvDetail = new System.Windows.Forms.DataGridView();
-            this.panelTop.SuspendLayout();
-            this.panelFilter.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).BeginInit();
-            this.panelInfo.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
-            this.SuspendLayout();
+            panelTop = new Panel();
+            lblTitle = new Label();
+            panelFilter = new Panel();
+            btnLihatStruk = new Button();
+            btnRefresh = new Button();
+            btnFilter = new Button();
+            dtpAkhir = new DateTimePicker();
+            dtpMulai = new DateTimePicker();
+            chkFilterTanggal = new CheckBox();
+            lblSampai = new Label();
+            lblDari = new Label();
+            panelMain = new Panel();
+            splitContainer1 = new SplitContainer();
+            groupBox1 = new GroupBox();
+            dgvTransaksi = new DataGridView();
+            panelInfo = new Panel();
+            lblTotalPendapatan = new Label();
+            lblTotal = new Label();
+            groupBox2 = new GroupBox();
+            dgvDetail = new DataGridView();
+            panelTop.SuspendLayout();
+            panelFilter.SuspendLayout();
+            panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTransaksi).BeginInit();
+            panelInfo.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDetail).BeginInit();
+            SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panelTop.Controls.Add(this.lblTitle);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1000, 60);
-            this.panelTop.TabIndex = 0;
+            panelTop.BackColor = Color.FromArgb(52, 152, 219);
+            panelTop.Controls.Add(lblTitle);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(1000, 60);
+            panelTop.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(20, 15);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(199, 30);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Riwayat Transaksi";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(20, 15);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(228, 30);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "📃Riwayat Transaksi";
+            lblTitle.Click += lblTitle_Click;
             // 
             // panelFilter
             // 
-            this.panelFilter.BackColor = System.Drawing.Color.White;
-            this.panelFilter.Controls.Add(this.btnLihatStruk);
-            this.panelFilter.Controls.Add(this.btnRefresh);
-            this.panelFilter.Controls.Add(this.btnFilter);
-            this.panelFilter.Controls.Add(this.dtpAkhir);
-            this.panelFilter.Controls.Add(this.dtpMulai);
-            this.panelFilter.Controls.Add(this.chkFilterTanggal);
-            this.panelFilter.Controls.Add(this.lblSampai);
-            this.panelFilter.Controls.Add(this.lblDari);
-            this.panelFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFilter.Location = new System.Drawing.Point(0, 60);
-            this.panelFilter.Name = "panelFilter";
-            this.panelFilter.Padding = new System.Windows.Forms.Padding(20);
-            this.panelFilter.Size = new System.Drawing.Size(1000, 80);
-            this.panelFilter.TabIndex = 1;
+            panelFilter.BackColor = Color.White;
+            panelFilter.Controls.Add(btnLihatStruk);
+            panelFilter.Controls.Add(btnRefresh);
+            panelFilter.Controls.Add(btnFilter);
+            panelFilter.Controls.Add(dtpAkhir);
+            panelFilter.Controls.Add(dtpMulai);
+            panelFilter.Controls.Add(chkFilterTanggal);
+            panelFilter.Controls.Add(lblSampai);
+            panelFilter.Controls.Add(lblDari);
+            panelFilter.Dock = DockStyle.Top;
+            panelFilter.Location = new Point(0, 60);
+            panelFilter.Name = "panelFilter";
+            panelFilter.Padding = new Padding(20);
+            panelFilter.Size = new Size(1000, 80);
+            panelFilter.TabIndex = 1;
             // 
             // btnLihatStruk
             // 
-            this.btnLihatStruk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.btnLihatStruk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLihatStruk.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLihatStruk.ForeColor = System.Drawing.Color.White;
-            this.btnLihatStruk.Location = new System.Drawing.Point(850, 25);
-            this.btnLihatStruk.Name = "btnLihatStruk";
-            this.btnLihatStruk.Size = new System.Drawing.Size(120, 35);
-            this.btnLihatStruk.TabIndex = 7;
-            this.btnLihatStruk.Text = "Lihat Struk";
-            this.btnLihatStruk.UseVisualStyleBackColor = false;
-            this.btnLihatStruk.Click += new System.EventHandler(this.btnLihatStruk_Click);
+            btnLihatStruk.BackColor = Color.FromArgb(155, 89, 182);
+            btnLihatStruk.FlatStyle = FlatStyle.Flat;
+            btnLihatStruk.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnLihatStruk.ForeColor = Color.White;
+            btnLihatStruk.Location = new Point(850, 25);
+            btnLihatStruk.Name = "btnLihatStruk";
+            btnLihatStruk.Size = new Size(120, 35);
+            btnLihatStruk.TabIndex = 7;
+            btnLihatStruk.Text = "Lihat Struk";
+            btnLihatStruk.UseVisualStyleBackColor = false;
+            btnLihatStruk.Click += btnLihatStruk_Click;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(750, 25);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(90, 35);
-            this.btnRefresh.TabIndex = 6;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            btnRefresh.BackColor = Color.FromArgb(149, 165, 166);
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnRefresh.ForeColor = Color.White;
+            btnRefresh.Location = new Point(750, 25);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(90, 35);
+            btnRefresh.TabIndex = 6;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnFilter
             // 
-            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Location = new System.Drawing.Point(650, 25);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(90, 35);
-            this.btnFilter.TabIndex = 5;
-            this.btnFilter.Text = "Filter";
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            btnFilter.BackColor = Color.FromArgb(46, 204, 113);
+            btnFilter.FlatStyle = FlatStyle.Flat;
+            btnFilter.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnFilter.ForeColor = Color.White;
+            btnFilter.Location = new Point(650, 25);
+            btnFilter.Name = "btnFilter";
+            btnFilter.Size = new Size(90, 35);
+            btnFilter.TabIndex = 5;
+            btnFilter.Text = "Filter";
+            btnFilter.UseVisualStyleBackColor = false;
+            btnFilter.Click += btnFilter_Click;
             // 
             // dtpAkhir
             // 
-            this.dtpAkhir.Enabled = false;
-            this.dtpAkhir.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAkhir.Location = new System.Drawing.Point(500, 30);
-            this.dtpAkhir.Name = "dtpAkhir";
-            this.dtpAkhir.Size = new System.Drawing.Size(130, 23);
-            this.dtpAkhir.TabIndex = 4;
+            dtpAkhir.Enabled = false;
+            dtpAkhir.Font = new Font("Segoe UI", 9F);
+            dtpAkhir.Format = DateTimePickerFormat.Short;
+            dtpAkhir.Location = new Point(500, 30);
+            dtpAkhir.Name = "dtpAkhir";
+            dtpAkhir.Size = new Size(130, 23);
+            dtpAkhir.TabIndex = 4;
             // 
             // dtpMulai
             // 
-            this.dtpMulai.Enabled = false;
-            this.dtpMulai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpMulai.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpMulai.Location = new System.Drawing.Point(300, 30);
-            this.dtpMulai.Name = "dtpMulai";
-            this.dtpMulai.Size = new System.Drawing.Size(130, 23);
-            this.dtpMulai.TabIndex = 2;
+            dtpMulai.Enabled = false;
+            dtpMulai.Font = new Font("Segoe UI", 9F);
+            dtpMulai.Format = DateTimePickerFormat.Short;
+            dtpMulai.Location = new Point(300, 30);
+            dtpMulai.Name = "dtpMulai";
+            dtpMulai.Size = new Size(130, 23);
+            dtpMulai.TabIndex = 2;
             // 
             // chkFilterTanggal
             // 
-            this.chkFilterTanggal.AutoSize = true;
-            this.chkFilterTanggal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.chkFilterTanggal.Location = new System.Drawing.Point(23, 32);
-            this.chkFilterTanggal.Name = "chkFilterTanggal";
-            this.chkFilterTanggal.Size = new System.Drawing.Size(107, 19);
-            this.chkFilterTanggal.TabIndex = 0;
-            this.chkFilterTanggal.Text = "Filter Tanggal";
-            this.chkFilterTanggal.UseVisualStyleBackColor = true;
-            this.chkFilterTanggal.CheckedChanged += new System.EventHandler(this.chkFilterTanggal_CheckedChanged);
+            chkFilterTanggal.AutoSize = true;
+            chkFilterTanggal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            chkFilterTanggal.Location = new Point(23, 32);
+            chkFilterTanggal.Name = "chkFilterTanggal";
+            chkFilterTanggal.Size = new Size(100, 19);
+            chkFilterTanggal.TabIndex = 0;
+            chkFilterTanggal.Text = "Filter Tanggal";
+            chkFilterTanggal.UseVisualStyleBackColor = true;
+            chkFilterTanggal.CheckedChanged += chkFilterTanggal_CheckedChanged;
             // 
             // lblSampai
             // 
-            this.lblSampai.AutoSize = true;
-            this.lblSampai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblSampai.Location = new System.Drawing.Point(440, 34);
-            this.lblSampai.Name = "lblSampai";
-            this.lblSampai.Size = new System.Drawing.Size(54, 15);
-            this.lblSampai.TabIndex = 3;
-            this.lblSampai.Text = "Sampai :";
+            lblSampai.AutoSize = true;
+            lblSampai.Font = new Font("Segoe UI", 9F);
+            lblSampai.Location = new Point(440, 34);
+            lblSampai.Name = "lblSampai";
+            lblSampai.Size = new Size(52, 15);
+            lblSampai.TabIndex = 3;
+            lblSampai.Text = "Sampai :";
             // 
             // lblDari
             // 
-            this.lblDari.AutoSize = true;
-            this.lblDari.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblDari.Location = new System.Drawing.Point(260, 34);
-            this.lblDari.Name = "lblDari";
-            this.lblDari.Size = new System.Drawing.Size(34, 15);
-            this.lblDari.TabIndex = 1;
-            this.lblDari.Text = "Dari :";
+            lblDari.AutoSize = true;
+            lblDari.Font = new Font("Segoe UI", 9F);
+            lblDari.Location = new Point(260, 34);
+            lblDari.Name = "lblDari";
+            lblDari.Size = new Size(34, 15);
+            lblDari.TabIndex = 1;
+            lblDari.Text = "Dari :";
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.panelMain.Controls.Add(this.splitContainer1);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 140);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Padding = new System.Windows.Forms.Padding(20);
-            this.panelMain.Size = new System.Drawing.Size(1000, 560);
-            this.panelMain.TabIndex = 2;
+            panelMain.BackColor = Color.FromArgb(236, 240, 241);
+            panelMain.Controls.Add(splitContainer1);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 140);
+            panelMain.Name = "panelMain";
+            panelMain.Padding = new Padding(20);
+            panelMain.Size = new Size(1000, 560);
+            panelMain.TabIndex = 2;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(20, 20);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(20, 20);
+            splitContainer1.Name = "splitContainer1";
+            splitContainer1.Orientation = Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            splitContainer1.Panel1.Controls.Add(groupBox1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(960, 520);
-            this.splitContainer1.SplitterDistance = 300;
-            this.splitContainer1.TabIndex = 0;
+            splitContainer1.Panel2.Controls.Add(groupBox2);
+            splitContainer1.Size = new Size(960, 520);
+            splitContainer1.SplitterDistance = 300;
+            splitContainer1.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvTransaksi);
-            this.groupBox1.Controls.Add(this.panelInfo);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 300);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Daftar Transaksi";
+            groupBox1.Controls.Add(dgvTransaksi);
+            groupBox1.Controls.Add(panelInfo);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(960, 300);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Daftar Transaksi";
             // 
             // dgvTransaksi
             // 
-            this.dgvTransaksi.AllowUserToAddRows = false;
-            this.dgvTransaksi.AllowUserToDeleteRows = false;
-            this.dgvTransaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTransaksi.BackgroundColor = System.Drawing.Color.White;
-            this.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTransaksi.Location = new System.Drawing.Point(3, 19);
-            this.dgvTransaksi.MultiSelect = false;
-            this.dgvTransaksi.Name = "dgvTransaksi";
-            this.dgvTransaksi.ReadOnly = true;
-            this.dgvTransaksi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTransaksi.Size = new System.Drawing.Size(954, 238);
-            this.dgvTransaksi.TabIndex = 0;
-            this.dgvTransaksi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaksi_CellClick);
+            dgvTransaksi.AllowUserToAddRows = false;
+            dgvTransaksi.AllowUserToDeleteRows = false;
+            dgvTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTransaksi.BackgroundColor = Color.White;
+            dgvTransaksi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTransaksi.Dock = DockStyle.Fill;
+            dgvTransaksi.Location = new Point(3, 19);
+            dgvTransaksi.MultiSelect = false;
+            dgvTransaksi.Name = "dgvTransaksi";
+            dgvTransaksi.ReadOnly = true;
+            dgvTransaksi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTransaksi.Size = new Size(954, 238);
+            dgvTransaksi.TabIndex = 0;
+            dgvTransaksi.CellClick += dgvTransaksi_CellClick;
             // 
             // panelInfo
             // 
-            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panelInfo.Controls.Add(this.lblTotalPendapatan);
-            this.panelInfo.Controls.Add(this.lblTotal);
-            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInfo.Location = new System.Drawing.Point(3, 257);
-            this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(954, 40);
-            this.panelInfo.TabIndex = 1;
+            panelInfo.BackColor = Color.FromArgb(52, 152, 219);
+            panelInfo.Controls.Add(lblTotalPendapatan);
+            panelInfo.Controls.Add(lblTotal);
+            panelInfo.Dock = DockStyle.Bottom;
+            panelInfo.Location = new Point(3, 257);
+            panelInfo.Name = "panelInfo";
+            panelInfo.Size = new Size(954, 40);
+            panelInfo.TabIndex = 1;
             // 
             // lblTotalPendapatan
             // 
-            this.lblTotalPendapatan.AutoSize = true;
-            this.lblTotalPendapatan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotalPendapatan.ForeColor = System.Drawing.Color.White;
-            this.lblTotalPendapatan.Location = new System.Drawing.Point(600, 11);
-            this.lblTotalPendapatan.Name = "lblTotalPendapatan";
-            this.lblTotalPendapatan.Size = new System.Drawing.Size(169, 19);
-            this.lblTotalPendapatan.TabIndex = 1;
-            this.lblTotalPendapatan.Text = "Total Pendapatan: Rp 0";
+            lblTotalPendapatan.AutoSize = true;
+            lblTotalPendapatan.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTotalPendapatan.ForeColor = Color.White;
+            lblTotalPendapatan.Location = new Point(600, 11);
+            lblTotalPendapatan.Name = "lblTotalPendapatan";
+            lblTotalPendapatan.Size = new Size(164, 19);
+            lblTotalPendapatan.TabIndex = 1;
+            lblTotalPendapatan.Text = "Total Pendapatan: Rp 0";
             // 
             // lblTotal
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(15, 11);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(133, 19);
-            this.lblTotal.TabIndex = 0;
-            this.lblTotal.Text = "Total: 0 transaksi";
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblTotal.ForeColor = Color.White;
+            lblTotal.Location = new Point(15, 11);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(121, 19);
+            lblTotal.TabIndex = 0;
+            lblTotal.Text = "Total: 0 transaksi";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dgvDetail);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(960, 216);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detail Transaksi";
+            groupBox2.Controls.Add(dgvDetail);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            groupBox2.Location = new Point(0, 0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(960, 216);
+            groupBox2.TabIndex = 0;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Detail Transaksi";
             // 
             // dgvDetail
             // 
-            this.dgvDetail.AllowUserToAddRows = false;
-            this.dgvDetail.AllowUserToDeleteRows = false;
-            this.dgvDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDetail.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDetail.Location = new System.Drawing.Point(3, 19);
-            this.dgvDetail.MultiSelect = false;
-            this.dgvDetail.Name = "dgvDetail";
-            this.dgvDetail.ReadOnly = true;
-            this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetail.Size = new System.Drawing.Size(954, 194);
-            this.dgvDetail.TabIndex = 0;
+            dgvDetail.AllowUserToAddRows = false;
+            dgvDetail.AllowUserToDeleteRows = false;
+            dgvDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDetail.BackgroundColor = Color.White;
+            dgvDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDetail.Dock = DockStyle.Fill;
+            dgvDetail.Location = new Point(3, 19);
+            dgvDetail.MultiSelect = false;
+            dgvDetail.Name = "dgvDetail";
+            dgvDetail.ReadOnly = true;
+            dgvDetail.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDetail.Size = new Size(954, 194);
+            dgvDetail.TabIndex = 0;
             // 
             // FormRiwayatTransaksi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelFilter);
-            this.Controls.Add(this.panelTop);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Name = "FormRiwayatTransaksi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Riwayat Transaksi";
-            this.Load += new System.EventHandler(this.FormRiwayatTransaksi_Load);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
-            this.panelFilter.ResumeLayout(false);
-            this.panelFilter.PerformLayout();
-            this.panelMain.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaksi)).EndInit();
-            this.panelInfo.ResumeLayout(false);
-            this.panelInfo.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1000, 700);
+            Controls.Add(panelMain);
+            Controls.Add(panelFilter);
+            Controls.Add(panelTop);
+            Font = new Font("Segoe UI", 9F);
+            Name = "FormRiwayatTransaksi";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Riwayat Transaksi";
+            Load += FormRiwayatTransaksi_Load;
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
+            panelFilter.ResumeLayout(false);
+            panelFilter.PerformLayout();
+            panelMain.ResumeLayout(false);
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvTransaksi).EndInit();
+            panelInfo.ResumeLayout(false);
+            panelInfo.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvDetail).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
