@@ -12,6 +12,8 @@ namespace FalazAgriMart.Forms.Admin
         private int _selectedUserId = 0;
         private bool _isEditMode = false;
 
+        private bool _isChangePasswordMode = false;
+
         public FormManajemenPegawai()
         {
             InitializeComponent();
@@ -132,6 +134,12 @@ namespace FalazAgriMart.Forms.Admin
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            if (_isChangePasswordMode)
+            {
+                SimpanPasswordBaru();
+                return;
+            }
+
             if (!ValidateInput())
                 return;
 
@@ -208,6 +216,43 @@ namespace FalazAgriMart.Forms.Admin
             }
         }
 
+        private void SimpanPasswordBaru()
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Password baru tidak boleh kosong!", "Validasi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPassword.Focus();
+                return;
+            }
+
+            try
+            {
+                bool success = _pegawaiRepository.UpdatePasswordPegawai(_selectedUserId, txtPassword.Text);
+
+                if (success)
+                {
+                    MessageBox.Show("Password berhasil diubah!", "Sukses",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Reset UI kembali ke normal
+                    ClearForm();
+                    SetButtonState(false);
+                    panelPassword.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Gagal mengubah password!", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (_selectedUserId == 0)
@@ -231,55 +276,33 @@ namespace FalazAgriMart.Forms.Admin
                 return;
             }
 
-            // Tampilkan input password
+            // Set Mode
+            _isChangePasswordMode = true;
+            _isEditMode = false; // Pastikan tidak dianggap edit profil biasa
+
+            // UI Setup
             panelPassword.Visible = true;
             lblPassword.Text = "Password Baru:";
             txtPassword.Clear();
+
+            // Disable input lain agar user fokus ganti password saja
+            txtUsername.Enabled = false;
+            txtNamaLengkap.Enabled = false;
+
+            // Enable tombol simpan & batal
+            btnSimpan.Enabled = true;
+            btnBatal.Enabled = true;
+
+            // Matikan tombol lain
+            btnEdit.Enabled = false;
+            btnHapus.Enabled = false;
+            btnUbahPassword.Enabled = false;
+
+            // Fokus ke password
             txtPassword.Focus();
 
-            DialogResult result = MessageBox.Show(
-                "Masukkan password baru, kemudian klik OK.",
-                "Ubah Password",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Information
-            );
-
-            if (result == DialogResult.OK)
-            {
-                if (string.IsNullOrWhiteSpace(txtPassword.Text))
-                {
-                    MessageBox.Show("Password tidak boleh kosong!", "Validasi",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                try
-                {
-                    bool success = _pegawaiRepository.UpdatePasswordPegawai(_selectedUserId, txtPassword.Text);
-
-                    if (success)
-                    {
-                        MessageBox.Show("Password berhasil diubah!", "Sukses",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtPassword.Clear();
-                        panelPassword.Visible = false;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Gagal mengubah password!", "Error",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                panelPassword.Visible = false;
-            }
+            // Beri info ke user lewat label info (opsional, lebih baik daripada popup)
+            lblInfo.Text = "ℹ️ Silakan masukkan password baru lalu klik tombol Simpan.";
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
@@ -375,8 +398,6 @@ namespace FalazAgriMart.Forms.Admin
         {
             ClearForm();
             SetButtonState(false);
-            _isEditMode = false;
-            _selectedUserId = 0;
             panelPassword.Visible = false;
         }
 
@@ -445,7 +466,24 @@ namespace FalazAgriMart.Forms.Admin
             txtNamaLengkap.Clear();
             txtPassword.Clear();
             _selectedUserId = 0;
+
+            // Reset Mode
+            _isChangePasswordMode = false;
+            _isEditMode = false;
+
+            // Kembalikan status textbox menjadi aktif (Enabled)
+            txtUsername.Enabled = true;
+            txtNamaLengkap.Enabled = true;
+
+            lblInfo.Text = "💡 Password hanya muncul saat tambah pegawai baru atau ubah password.";
         }
+
+        //private void btnBatal_Click(object sender, EventArgs e)
+        //{
+        //    ClearForm();
+        //    SetButtonState(false);
+        //    panelPassword.Visible = false;
+        //}
 
         private void SetButtonState(bool hasSelection)
         {
