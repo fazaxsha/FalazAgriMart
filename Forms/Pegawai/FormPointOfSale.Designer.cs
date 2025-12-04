@@ -98,19 +98,18 @@
             panelTop.Controls.Add(lblTitle);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
-            panelTop.Margin = new Padding(4, 3, 4, 3);
+            panelTop.Margin = new Padding(3, 4, 3, 4);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1633, 92);
+            panelTop.Size = new Size(1371, 93);
             panelTop.TabIndex = 0;
             // 
             // lblTanggal
             // 
             lblTanggal.Font = new Font("Segoe UI", 9F);
             lblTanggal.ForeColor = Color.FromArgb(232, 245, 233);
-            lblTanggal.Location = new Point(1225, 52);
-            lblTanggal.Margin = new Padding(4, 0, 4, 0);
+            lblTanggal.Location = new Point(1029, 53);
             lblTanggal.Name = "lblTanggal";
-            lblTanggal.Size = new Size(373, 29);
+            lblTanggal.Size = new Size(320, 33);
             lblTanggal.TabIndex = 2;
             lblTanggal.Text = "📅 Tanggal: -";
             lblTanggal.TextAlign = ContentAlignment.MiddleRight;
@@ -119,22 +118,20 @@
             // 
             lblKasir.Font = new Font("Segoe UI", 10F);
             lblKasir.ForeColor = Color.White;
-            lblKasir.Location = new Point(1225, 23);
-            lblKasir.Margin = new Padding(4, 0, 4, 0);
+            lblKasir.Location = new Point(1029, 20);
             lblKasir.Name = "lblKasir";
-            lblKasir.Size = new Size(373, 29);
+            lblKasir.Size = new Size(320, 33);
             lblKasir.TabIndex = 1;
             lblKasir.Text = "👤 Kasir: -";
             lblKasir.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblTitle
             // 
-            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(35, 23);
-            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Location = new Point(23, 20);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(467, 46);
+            lblTitle.Size = new Size(400, 53);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "🌱 AgriMart POS";
             // 
@@ -146,10 +143,10 @@
             panelProduk.Controls.Add(lblTotalProduk);
             panelProduk.Controls.Add(dgvProduk);
             panelProduk.Controls.Add(panelSearchBox);
-            panelProduk.Location = new Point(23, 115);
-            panelProduk.Margin = new Padding(4, 3, 4, 3);
+            panelProduk.Location = new Point(23, 113);
+            panelProduk.Margin = new Padding(3, 4, 3, 4);
             panelProduk.Name = "panelProduk";
-            panelProduk.Size = new Size(723, 750);
+            panelProduk.Size = new Size(663, 800);
             panelProduk.TabIndex = 1;
             // 
             // btnTambahKeranjang
@@ -159,10 +156,10 @@
             btnTambahKeranjang.FlatStyle = FlatStyle.Flat;
             btnTambahKeranjang.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnTambahKeranjang.ForeColor = Color.White;
-            btnTambahKeranjang.Location = new Point(303, 675);
-            btnTambahKeranjang.Margin = new Padding(4, 3, 4, 3);
+            btnTambahKeranjang.Location = new Point(263, 720);
+            btnTambahKeranjang.Margin = new Padding(3, 4, 3, 4);
             btnTambahKeranjang.Name = "btnTambahKeranjang";
-            btnTambahKeranjang.Size = new Size(397, 58);
+            btnTambahKeranjang.Size = new Size(377, 60);
             btnTambahKeranjang.TabIndex = 4;
             btnTambahKeranjang.Text = "➕ TAMBAH";
             btnTambahKeranjang.UseVisualStyleBackColor = false;
@@ -173,20 +170,19 @@
             panelQuantityBox.BackColor = Color.FromArgb(241, 248, 233);
             panelQuantityBox.Controls.Add(lblQuantity);
             panelQuantityBox.Controls.Add(numQuantity);
-            panelQuantityBox.Location = new Point(23, 675);
-            panelQuantityBox.Margin = new Padding(4, 3, 4, 3);
+            panelQuantityBox.Location = new Point(23, 720);
+            panelQuantityBox.Margin = new Padding(3, 4, 3, 4);
             panelQuantityBox.Name = "panelQuantityBox";
-            panelQuantityBox.Size = new Size(257, 58);
+            panelQuantityBox.Size = new Size(217, 60);
             panelQuantityBox.TabIndex = 3;
             // 
             // lblQuantity
             // 
             lblQuantity.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblQuantity.ForeColor = Color.FromArgb(55, 71, 79);
-            lblQuantity.Location = new Point(6, 14);
-            lblQuantity.Margin = new Padding(4, 0, 4, 0);
+            lblQuantity.Location = new Point(11, 13);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(70, 27);
+            lblQuantity.Size = new Size(57, 33);
             lblQuantity.TabIndex = 0;
             lblQuantity.Text = "Qty:";
             // 
@@ -194,22 +190,23 @@
             // 
             numQuantity.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             numQuantity.ForeColor = Color.FromArgb(55, 71, 79);
-            numQuantity.Location = new Point(128, 12);
-            numQuantity.Margin = new Padding(4, 3, 4, 3);
+            numQuantity.Location = new Point(114, 11);
+            numQuantity.Margin = new Padding(3, 4, 3, 4);
+            numQuantity.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numQuantity.Name = "numQuantity";
-            numQuantity.Size = new Size(111, 29);
+            numQuantity.Size = new Size(91, 34);
             numQuantity.TabIndex = 0;
+            numQuantity.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblTotalProduk
             // 
             lblTotalProduk.BackColor = Color.FromArgb(241, 248, 233);
             lblTotalProduk.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblTotalProduk.ForeColor = Color.FromArgb(85, 139, 47);
-            lblTotalProduk.Location = new Point(23, 629);
-            lblTotalProduk.Margin = new Padding(4, 0, 4, 0);
+            lblTotalProduk.Location = new Point(23, 667);
             lblTotalProduk.Name = "lblTotalProduk";
-            lblTotalProduk.Padding = new Padding(12, 6, 12, 6);
-            lblTotalProduk.Size = new Size(233, 35);
+            lblTotalProduk.Padding = new Padding(11, 7, 11, 7);
+            lblTotalProduk.Size = new Size(229, 40);
             lblTotalProduk.TabIndex = 2;
             lblTotalProduk.Text = "📦 0 produk tersedia";
             // 
@@ -239,15 +236,16 @@
             dgvProduk.DefaultCellStyle = dataGridViewCellStyle2;
             dgvProduk.EnableHeadersVisualStyles = false;
             dgvProduk.GridColor = Color.FromArgb(232, 245, 233);
-            dgvProduk.Location = new Point(23, 110);
-            dgvProduk.Margin = new Padding(4, 3, 4, 3);
+            dgvProduk.Location = new Point(23, 120);
+            dgvProduk.Margin = new Padding(3, 4, 3, 4);
             dgvProduk.MultiSelect = false;
             dgvProduk.Name = "dgvProduk";
             dgvProduk.ReadOnly = true;
             dgvProduk.RowHeadersVisible = false;
-            dgvProduk.RowTemplate.Height = 35;
+            dgvProduk.RowHeadersWidth = 51;
+            dgvProduk.RowTemplate.Height = 30;
             dgvProduk.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProduk.Size = new Size(677, 508);
+            dgvProduk.Size = new Size(617, 533);
             dgvProduk.TabIndex = 1;
             dgvProduk.CellDoubleClick += dgvProduk_CellDoubleClick;
             // 
@@ -256,33 +254,31 @@
             panelSearchBox.BackColor = Color.FromArgb(241, 248, 233);
             panelSearchBox.Controls.Add(lblCariProduk);
             panelSearchBox.Controls.Add(txtCariProduk);
-            panelSearchBox.Location = new Point(23, 23);
-            panelSearchBox.Margin = new Padding(4, 3, 4, 3);
+            panelSearchBox.Location = new Point(23, 27);
+            panelSearchBox.Margin = new Padding(3, 4, 3, 4);
             panelSearchBox.Name = "panelSearchBox";
-            panelSearchBox.Size = new Size(677, 69);
+            panelSearchBox.Size = new Size(617, 80);
             panelSearchBox.TabIndex = 0;
             // 
             // lblCariProduk
             // 
             lblCariProduk.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             lblCariProduk.ForeColor = Color.FromArgb(51, 105, 30);
-            lblCariProduk.Location = new Point(18, 9);
-            lblCariProduk.Margin = new Padding(4, 0, 4, 0);
+            lblCariProduk.Location = new Point(17, 11);
             lblCariProduk.Name = "lblCariProduk";
-            lblCariProduk.Size = new Size(175, 29);
+            lblCariProduk.Size = new Size(171, 33);
             lblCariProduk.TabIndex = 0;
             lblCariProduk.Text = "🔍 Cari Produk";
             // 
             // txtCariProduk
             // 
-            txtCariProduk.BackColor = Color.FromArgb(241, 248, 233);
-            txtCariProduk.BorderStyle = BorderStyle.None;
+            txtCariProduk.BackColor = Color.FromArgb(128, 255, 128);
             txtCariProduk.Font = new Font("Segoe UI", 11F);
             txtCariProduk.ForeColor = Color.FromArgb(55, 71, 79);
-            txtCariProduk.Location = new Point(23, 38);
-            txtCariProduk.Margin = new Padding(4, 3, 4, 3);
+            txtCariProduk.Location = new Point(23, 44);
+            txtCariProduk.Margin = new Padding(3, 4, 3, 4);
             txtCariProduk.Name = "txtCariProduk";
-            txtCariProduk.Size = new Size(636, 20);
+            txtCariProduk.Size = new Size(577, 32);
             txtCariProduk.TabIndex = 0;
             txtCariProduk.TextChanged += txtCariProduk_TextChanged;
             // 
@@ -293,10 +289,10 @@
             panelKeranjang.Controls.Add(lblJumlahItem);
             panelKeranjang.Controls.Add(dgvKeranjang);
             panelKeranjang.Controls.Add(lblKeranjangTitle);
-            panelKeranjang.Location = new Point(770, 115);
-            panelKeranjang.Margin = new Padding(4, 3, 4, 3);
+            panelKeranjang.Location = new Point(709, 113);
+            panelKeranjang.Margin = new Padding(3, 4, 3, 4);
             panelKeranjang.Name = "panelKeranjang";
-            panelKeranjang.Size = new Size(560, 485);
+            panelKeranjang.Size = new Size(640, 507);
             panelKeranjang.TabIndex = 2;
             // 
             // btnHapusItem
@@ -306,10 +302,10 @@
             btnHapusItem.FlatStyle = FlatStyle.Flat;
             btnHapusItem.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnHapusItem.ForeColor = Color.White;
-            btnHapusItem.Location = new Point(356, 415);
-            btnHapusItem.Margin = new Padding(4, 3, 4, 3);
+            btnHapusItem.Location = new Point(451, 427);
+            btnHapusItem.Margin = new Padding(3, 4, 3, 4);
             btnHapusItem.Name = "btnHapusItem";
-            btnHapusItem.Size = new Size(181, 46);
+            btnHapusItem.Size = new Size(166, 53);
             btnHapusItem.TabIndex = 3;
             btnHapusItem.Text = "🗑️ Hapus";
             btnHapusItem.UseVisualStyleBackColor = false;
@@ -320,11 +316,10 @@
             lblJumlahItem.BackColor = Color.FromArgb(255, 243, 224);
             lblJumlahItem.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblJumlahItem.ForeColor = Color.FromArgb(230, 81, 0);
-            lblJumlahItem.Location = new Point(23, 415);
-            lblJumlahItem.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahItem.Location = new Point(23, 427);
             lblJumlahItem.Name = "lblJumlahItem";
-            lblJumlahItem.Padding = new Padding(18, 0, 0, 0);
-            lblJumlahItem.Size = new Size(315, 46);
+            lblJumlahItem.Padding = new Padding(17, 0, 0, 0);
+            lblJumlahItem.Size = new Size(411, 53);
             lblJumlahItem.TabIndex = 2;
             lblJumlahItem.Text = "📋 0 item (0 pcs)";
             lblJumlahItem.TextAlign = ContentAlignment.MiddleLeft;
@@ -354,26 +349,27 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             dgvKeranjang.DefaultCellStyle = dataGridViewCellStyle4;
             dgvKeranjang.EnableHeadersVisualStyles = false;
-            dgvKeranjang.Location = new Point(23, 75);
-            dgvKeranjang.Margin = new Padding(4, 3, 4, 3);
+            dgvKeranjang.Location = new Point(23, 80);
+            dgvKeranjang.Margin = new Padding(3, 4, 3, 4);
             dgvKeranjang.MultiSelect = false;
             dgvKeranjang.Name = "dgvKeranjang";
             dgvKeranjang.ReadOnly = true;
             dgvKeranjang.RowHeadersVisible = false;
+            dgvKeranjang.RowHeadersWidth = 51;
+            dgvKeranjang.RowTemplate.Height = 30;
             dgvKeranjang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvKeranjang.Size = new Size(513, 323);
+            dgvKeranjang.Size = new Size(594, 333);
             dgvKeranjang.TabIndex = 1;
             // 
             // lblKeranjangTitle
             // 
             lblKeranjangTitle.BackColor = Color.FromArgb(255, 167, 38);
-            lblKeranjangTitle.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lblKeranjangTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblKeranjangTitle.ForeColor = Color.White;
             lblKeranjangTitle.Location = new Point(0, 0);
-            lblKeranjangTitle.Margin = new Padding(4, 0, 4, 0);
             lblKeranjangTitle.Name = "lblKeranjangTitle";
             lblKeranjangTitle.Padding = new Padding(23, 0, 0, 0);
-            lblKeranjangTitle.Size = new Size(560, 58);
+            lblKeranjangTitle.Size = new Size(640, 67);
             lblKeranjangTitle.TabIndex = 0;
             lblKeranjangTitle.Text = "\U0001f6d2 Keranjang Belanja";
             lblKeranjangTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -391,10 +387,10 @@
             panelCheckout.Controls.Add(lblTotalLabel);
             panelCheckout.Controls.Add(txtNamaPelanggan);
             panelCheckout.Controls.Add(lblNamaPelanggan);
-            panelCheckout.Location = new Point(770, 623);
-            panelCheckout.Margin = new Padding(4, 3, 4, 3);
+            panelCheckout.Location = new Point(709, 647);
+            panelCheckout.Margin = new Padding(3, 4, 3, 4);
             panelCheckout.Name = "panelCheckout";
-            panelCheckout.Size = new Size(560, 335);
+            panelCheckout.Size = new Size(640, 373);
             panelCheckout.TabIndex = 3;
             // 
             // btnBatalTransaksi
@@ -405,10 +401,10 @@
             btnBatalTransaksi.FlatStyle = FlatStyle.Flat;
             btnBatalTransaksi.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnBatalTransaksi.ForeColor = Color.FromArgb(239, 83, 80);
-            btnBatalTransaksi.Location = new Point(23, 265);
-            btnBatalTransaksi.Margin = new Padding(4, 3, 4, 3);
+            btnBatalTransaksi.Location = new Point(23, 293);
+            btnBatalTransaksi.Margin = new Padding(3, 4, 3, 4);
             btnBatalTransaksi.Name = "btnBatalTransaksi";
-            btnBatalTransaksi.Size = new Size(117, 52);
+            btnBatalTransaksi.Size = new Size(114, 60);
             btnBatalTransaksi.TabIndex = 8;
             btnBatalTransaksi.Text = "❌ Batal";
             btnBatalTransaksi.UseVisualStyleBackColor = false;
@@ -421,10 +417,10 @@
             btnProses.FlatStyle = FlatStyle.Flat;
             btnProses.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnProses.ForeColor = Color.White;
-            btnProses.Location = new Point(163, 265);
-            btnProses.Margin = new Padding(4, 3, 4, 3);
+            btnProses.Location = new Point(160, 293);
+            btnProses.Margin = new Padding(3, 4, 3, 4);
             btnProses.Name = "btnProses";
-            btnProses.Size = new Size(373, 52);
+            btnProses.Size = new Size(457, 60);
             btnProses.TabIndex = 9;
             btnProses.Text = "✅ SELESAI";
             btnProses.UseVisualStyleBackColor = false;
@@ -435,10 +431,9 @@
             lblKembalian.BackColor = Color.FromArgb(232, 245, 233);
             lblKembalian.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblKembalian.ForeColor = Color.FromArgb(51, 105, 30);
-            lblKembalian.Location = new Point(280, 202);
-            lblKembalian.Margin = new Padding(4, 0, 4, 0);
+            lblKembalian.Location = new Point(331, 220);
             lblKembalian.Name = "lblKembalian";
-            lblKembalian.Size = new Size(257, 33);
+            lblKembalian.Size = new Size(286, 40);
             lblKembalian.TabIndex = 7;
             lblKembalian.Text = "Rp 0";
             lblKembalian.TextAlign = ContentAlignment.MiddleRight;
@@ -447,20 +442,19 @@
             // 
             lblKembalianLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblKembalianLabel.ForeColor = Color.FromArgb(107, 114, 128);
-            lblKembalianLabel.Location = new Point(280, 173);
-            lblKembalianLabel.Margin = new Padding(4, 0, 4, 0);
+            lblKembalianLabel.Location = new Point(331, 187);
             lblKembalianLabel.Name = "lblKembalianLabel";
-            lblKembalianLabel.Size = new Size(175, 23);
+            lblKembalianLabel.Size = new Size(171, 27);
             lblKembalianLabel.TabIndex = 6;
             lblKembalianLabel.Text = "↩️ Kembalian";
             // 
             // txtJumlahBayar
             // 
             txtJumlahBayar.Font = new Font("Segoe UI", 12F);
-            txtJumlahBayar.Location = new Point(23, 202);
-            txtJumlahBayar.Margin = new Padding(4, 3, 4, 3);
+            txtJumlahBayar.Location = new Point(23, 220);
+            txtJumlahBayar.Margin = new Padding(3, 4, 3, 4);
             txtJumlahBayar.Name = "txtJumlahBayar";
-            txtJumlahBayar.Size = new Size(233, 29);
+            txtJumlahBayar.Size = new Size(285, 34);
             txtJumlahBayar.TabIndex = 5;
             txtJumlahBayar.TextAlign = HorizontalAlignment.Right;
             txtJumlahBayar.TextChanged += txtJumlahBayar_TextChanged;
@@ -470,23 +464,21 @@
             // 
             lblJumlahBayarLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblJumlahBayarLabel.ForeColor = Color.FromArgb(107, 114, 128);
-            lblJumlahBayarLabel.Location = new Point(23, 173);
-            lblJumlahBayarLabel.Margin = new Padding(4, 0, 4, 0);
+            lblJumlahBayarLabel.Location = new Point(23, 187);
             lblJumlahBayarLabel.Name = "lblJumlahBayarLabel";
-            lblJumlahBayarLabel.Size = new Size(175, 23);
+            lblJumlahBayarLabel.Size = new Size(171, 27);
             lblJumlahBayarLabel.TabIndex = 4;
             lblJumlahBayarLabel.Text = "💵 Bayar";
             // 
             // lblTotal
             // 
             lblTotal.BackColor = Color.FromArgb(255, 243, 224);
-            lblTotal.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTotal.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lblTotal.ForeColor = Color.FromArgb(230, 81, 0);
-            lblTotal.Location = new Point(23, 104);
-            lblTotal.Margin = new Padding(4, 0, 4, 0);
+            lblTotal.Location = new Point(23, 113);
             lblTotal.Name = "lblTotal";
-            lblTotal.Padding = new Padding(18, 0, 18, 0);
-            lblTotal.Size = new Size(513, 58);
+            lblTotal.Padding = new Padding(17, 0, 17, 0);
+            lblTotal.Size = new Size(594, 60);
             lblTotal.TabIndex = 3;
             lblTotal.Text = "Rp 0";
             lblTotal.TextAlign = ContentAlignment.MiddleRight;
@@ -495,10 +487,9 @@
             // 
             lblTotalLabel.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblTotalLabel.ForeColor = Color.FromArgb(107, 114, 128);
-            lblTotalLabel.Location = new Point(23, 81);
-            lblTotalLabel.Margin = new Padding(4, 0, 4, 0);
+            lblTotalLabel.Location = new Point(23, 87);
             lblTotalLabel.Name = "lblTotalLabel";
-            lblTotalLabel.Size = new Size(175, 23);
+            lblTotalLabel.Size = new Size(171, 27);
             lblTotalLabel.TabIndex = 2;
             lblTotalLabel.Text = "💰 TOTAL";
             // 
@@ -506,39 +497,37 @@
             // 
             txtNamaPelanggan.BorderStyle = BorderStyle.FixedSingle;
             txtNamaPelanggan.Font = new Font("Segoe UI", 10F);
-            txtNamaPelanggan.Location = new Point(23, 40);
-            txtNamaPelanggan.Margin = new Padding(4, 3, 4, 3);
+            txtNamaPelanggan.Location = new Point(23, 47);
+            txtNamaPelanggan.Margin = new Padding(3, 4, 3, 4);
             txtNamaPelanggan.Name = "txtNamaPelanggan";
-            txtNamaPelanggan.Size = new Size(513, 25);
+            txtNamaPelanggan.Size = new Size(594, 30);
             txtNamaPelanggan.TabIndex = 1;
             // 
             // lblNamaPelanggan
             // 
             lblNamaPelanggan.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblNamaPelanggan.ForeColor = Color.FromArgb(107, 114, 128);
-            lblNamaPelanggan.Location = new Point(23, 17);
-            lblNamaPelanggan.Margin = new Padding(4, 0, 4, 0);
+            lblNamaPelanggan.Location = new Point(23, 20);
             lblNamaPelanggan.Name = "lblNamaPelanggan";
-            lblNamaPelanggan.Size = new Size(233, 23);
+            lblNamaPelanggan.Size = new Size(229, 27);
             lblNamaPelanggan.TabIndex = 0;
             lblNamaPelanggan.Text = "👤 Nama Pelanggan";
             // 
             // FormPointOfSale
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(236, 245, 236);
-            ClientSize = new Size(1633, 923);
+            ClientSize = new Size(1371, 1067);
             Controls.Add(panelCheckout);
             Controls.Add(panelKeranjang);
             Controls.Add(panelProduk);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPointOfSale";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AgriMart - Point of Sale";
-            WindowState = FormWindowState.Maximized;
             Load += FormPointOfSale_Load;
             panelTop.ResumeLayout(false);
             panelProduk.ResumeLayout(false);
